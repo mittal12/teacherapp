@@ -1,0 +1,63 @@
+ [
+  {
+  "title": "HOME",
+  "leftDrawerItems": [
+                      {
+                      "icon": "home.png",
+                      "title": "HOME",
+                      "className": "DashboardViewController",
+                      "navigationTitle": "",
+                      "index": "0"
+                      },
+                      {
+                      "icon": "about.png",
+                      "title": "ABOUT US",
+                      "className": "AboutUsVC",
+                      "navigationTitle": "About Us",
+                      "index":"0"
+                      },
+                      {
+                      "icon": "privacy.png",
+                      "title": "PRIVACY POLICY",
+                      "className": "PrivacyPolicyVC",
+                      "navigationTitle": "Privacy Policy",
+                      "index":"0"
+                      },
+                      {
+                      "icon": "refund.png",
+                      "title": "REFUND/CANCELLATION",
+                      "className": "RefundVC",
+                      "navigationTitle": "Refund/Cancellation",
+                      "index":"0"
+                      },
+                      {
+                      "icon": "refund.png",
+                      "title": "VIEW RBI RATES",
+                      "className": "ViewRBIRatesVC",
+                      "navigationTitle": "View RBI Rates",
+                      "index":"0"
+                      },
+                      {
+                      "icon": "setting.png",
+                      "title": "SET A RATE ALERT",
+                      "className": "SetRateAlertVC",
+                      "navigationTitle": "Set A  Rate Alert",
+                      "index":"1"
+                      },
+                      {
+                      "icon": "logout.png",
+                      "title": "INTER BANK RATES",
+                      "className": "InterBankRateVC",
+                      "navigationTitle": "Inter Bank Rates",
+                      "index":"1"
+                      },
+                      {
+                      "icon": "logout.png",
+                      "title": "SIGN IN/ SIGN UP",
+                      "className": "LoginViewController",
+                      "navigationTitle": "",
+                      "index":"0"
+                      }
+                      ]
+  }
+  ]

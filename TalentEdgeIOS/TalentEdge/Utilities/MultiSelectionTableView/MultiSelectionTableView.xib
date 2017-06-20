@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MultiSelectionTableView" customModule="ZipCheckList" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButtonOutLet" destination="GCd-i1-Gyt" id="9l0-Mr-aai"/>
+                <outlet property="doneButtonOutlet" destination="mYb-CX-hj9" id="FcW-sv-BtF"/>
+                <outlet property="tableView" destination="aUB-xy-lWy" id="qhN-ii-Sm8"/>
+                <outlet property="view" destination="aGY-fF-WvY" id="p7n-BR-7Jn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="aGY-fF-WvY">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceM-iT-BYk">
+                    <rect key="frame" x="50" y="200" width="500" height="200"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aUB-xy-lWy">
+                            <rect key="frame" x="0.0" y="0.0" width="500" height="170"/>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="170" id="Ifn-1W-exH"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="x5J-oa-hZq"/>
+                                <outlet property="delegate" destination="-1" id="IfS-RN-16I"/>
+                            </connections>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCd-i1-Gyt">
+                            <rect key="frame" x="0.0" y="170" width="250" height="30"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.70196078429999997" green="0.1058823529" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="5zb-uf-ttz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="-1" eventType="touchUpInside" id="tPY-xk-DC8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYb-CX-hj9">
+                            <rect key="frame" x="250" y="170" width="250" height="30"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.13407295629999999" green="0.49721642090000001" blue="0.1217093907" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="PIG-gl-riz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="saveButtonAction:" destination="-1" eventType="touchUpInside" id="BLj-23-pWa"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="aUB-xy-lWy" firstAttribute="top" secondItem="ceM-iT-BYk" secondAttribute="top" id="5G0-wJ-tGO"/>
+                        <constraint firstItem="GCd-i1-Gyt" firstAttribute="top" secondItem="aUB-xy-lWy" secondAttribute="bottom" id="7IM-3f-Y2Q"/>
+                        <constraint firstItem="aUB-xy-lWy" firstAttribute="leading" secondItem="ceM-iT-BYk" secondAttribute="leading" id="N1o-X1-wMg"/>
+                        <constraint firstAttribute="trailing" secondItem="aUB-xy-lWy" secondAttribute="trailing" id="YeI-Tm-ynQ"/>
+                        <constraint firstItem="mYb-CX-hj9" firstAttribute="top" secondItem="aUB-xy-lWy" secondAttribute="bottom" id="cOi-cY-Gbs"/>
+                        <constraint firstItem="GCd-i1-Gyt" firstAttribute="leading" secondItem="ceM-iT-BYk" secondAttribute="leading" id="dve-Le-IlI"/>
+                        <constraint firstAttribute="trailing" secondItem="mYb-CX-hj9" secondAttribute="trailing" id="h9X-Am-Gh5"/>
+                        <constraint firstAttribute="height" constant="200" id="hQ6-P2-qct"/>
+                        <constraint firstItem="mYb-CX-hj9" firstAttribute="leading" secondItem="GCd-i1-Gyt" secondAttribute="trailing" id="hvE-kD-We2"/>
+                        <constraint firstItem="GCd-i1-Gyt" firstAttribute="width" secondItem="mYb-CX-hj9" secondAttribute="width" id="nDU-uF-E2l"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.2454741379" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ceM-iT-BYk" firstAttribute="leading" secondItem="aGY-fF-WvY" secondAttribute="leading" constant="50" id="BKN-s6-xpI"/>
+                <constraint firstAttribute="trailing" secondItem="ceM-iT-BYk" secondAttribute="trailing" constant="50" id="GDD-ek-0Kd"/>
+                <constraint firstItem="ceM-iT-BYk" firstAttribute="centerY" secondItem="aGY-fF-WvY" secondAttribute="centerY" id="gA0-dd-xjC"/>
+            </constraints>
+            <point key="canvasLocation" x="447" y="233"/>
+        </view>
+    </objects>
+</document>
