@@ -1,0 +1,56 @@
+[
+ {
+ "title": "HOME",
+ "leftDrawerItems": [
+                     {
+                     "icon": "Live class.PNG",
+                     "title": "Live Classes",
+                     "className": "MyCourseDetailViewController",
+                     "navigationTitle": "Live Classes",
+                     "index":"6"
+                     },
+                     {
+                     "icon": "Assignment.PNG",
+                     "title": "Assignment",
+                     "className": "MyCourseDetailViewController",
+                     "navigationTitle": "Assignment",
+                     "index":"8"
+                     },
+                     {
+                     "icon": "Assessment.PNG",
+                     "title": "Assessment",
+                     "className": "MyCourseDetailViewController",
+                     "navigationTitle": "Assessment",
+                     "index":"9"
+                     },
+                     {
+                     "icon": "Disscussion.PNG",
+                     "title": "Discussion",
+                     "className": "MyCourseDetailViewController",
+                     "navigationTitle": "Discussion",
+                     "index":"10"
+                     },
+                     {
+                     "icon": "Message.PNG",
+                     "title": "Message",
+                     "className": "MessageViewController",
+                     "navigationTitle": "Message",
+                     "index":"1"
+                     },
+                     {
+                     "icon": "Notification.PNG",
+                     "title": "Notification",
+                     "className": "NotificationViewController",
+                     "navigationTitle": "Notification",
+                     "index":"1"
+                     },
+                     {
+                     "icon": "Logout.PNG",
+                     "title": "LOGOUT",
+                     "className": "DemoTabbar",
+                     "navigationTitle": "Select Language",
+                     "index":"1"
+                     }
+                     ]
+ }
+ ]

@@ -16,13 +16,11 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
     var subModuleArray : [TEModuleDetailData]!
     var isCameFromDrawer : Bool!
     
-    
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         modulesArray = [TEModuleData]()
         subModuleArray = [TEModuleDetailData]()
-       
-
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +28,7 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
         modulesTableView.showsVerticalScrollIndicator = false
         modulesTableView.tableFooterView = UIView()
         fetctDataFromServer()
+        self.tableView.separatorStyle = .none
 
     }
     
@@ -76,7 +75,7 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
         case 8:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ModuleMajorInnerTableCell1", for: indexPath) as! ModuleMajorInnerTableCell
             cell.titleLabel.text = subModuleArray[indexPath.row].title
-         //   cell.descriptionTextVIew.text = subModuleArray[indexPath.row].desc
+            cell.descriptionTextVIew.text = subModuleArray[indexPath.row].desc
             
             cell.subTitleLabel.text = "  Discussion  "
             cell.bottomBlueButton.setTitle("  View  ", for: UIControlState())
@@ -116,11 +115,11 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: "NotesTableCell", for: indexPath) as! NotesTableCell
                 cell.titleLabel.text = subModuleArray[indexPath.row].title
-               // cell.descriptionTextVIew.text = subModuleArray[indexPath.row].desc
-                cell.subTitleLabel.text = "Notes Session"
+                cell.descriptiveTextVIew.text = subModuleArray[indexPath.row].desc
+                cell.subTitleLabel.text = "  Reference Notes  "
+                cell.plusImageView.image = UIImage(named: "note.png")
+
                // cell.bottomBlueButton.setTitle("  Read  ", for: UIControlState())
-                cell.plusImageView.image = UIImage(named: "live_class1.PNG")
-                
                 let part1 = NSMutableAttributedString(string: subModuleArray[indexPath.row].start_date_label)
                 let part2 = NSMutableAttributedString(string: subModuleArray[indexPath.row].start_date_value, attributes: yourAttributes)
                 let part3 = NSMutableAttributedString(string: subModuleArray[indexPath.row].end_date_label)
@@ -154,7 +153,7 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                     combination1.append(partTwo)
                     cell.durationLabel.attributedText = combination1
                     
-                    cell.leftBottomLabel.text = "completed"
+                    cell.leftBottomLabel.text = "Completed"
                     cell.rightUpperLabel.text  =  "\(subModuleArray[indexPath.row].cnt_completed) Out of \(subModuleArray[indexPath.row].notes_count)"
                     
                     
@@ -168,34 +167,51 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                     
                     drawLineFromPoint(CGPoint(x: Double(cell.rightMiddleView.frame.size.width - 10) * (0/100), y: 20.0), ofColor: DataUtils.colorWithHexString("3bab14"), inView: (cell.rightMiddleView), String(describing: subModuleArray[indexPath.row].avg_completion_percentage))
                     cell.tag = 100 + indexPath.row
-                
+                    
+                    
+                    
+                    cell.leftUpperLabel.textColor = UIColor.init(hexString:"2F9DD4")
+                    
+                   // cell.layer.borderColor = UIColor.init(hexString:"D2D4D6").cgColor
+                   // cell.layer.borderWidth = 1
+                    cell.mainView.layer.borderColor = UIColor.init(hexString:"D2D4D6").cgColor
+                    cell.mainView.layer.borderWidth = 1
+                    cell.mainView.layer.cornerRadius = 3
+                    cell.subTitleLabel.layer.cornerRadius = cell.subTitleLabel.frame.size.height/2
+                    
+                    
+//                    cell.mainView.layer.shadowRadius = 1.5
+//                    cell.mainView.layer.shadowColor = UIColor(red: CGFloat(0 / 255.0), green: CGFloat(0 / 255.0), blue: CGFloat(0 / 255.0), alpha: CGFloat(1.0)).cgColor
+//                    cell.mainView.layer.shadowOffset = CGSize(width: CGFloat(0.0), height: CGFloat(0.0))
+//                    cell.mainView.layer.shadowOpacity = 0.9
+//                    cell.mainView.layer.masksToBounds = false
+//                    let shadowInsets: UIEdgeInsets = UIEdgeInsetsMake(0, 0, -1.5, 0)
+//                    let shadowPath = UIBezierPath(rect: UIEdgeInsetsInsetRect(cell.mainView.bounds, shadowInsets))
+//                    cell.mainView.layer.shadowPath = shadowPath.cgPath
+                    cell.subTitleLabel.clipsToBounds = true
+                    cell.selectionStyle = .none
+//                    cell.subTitleLabel.sizeToFit()
+//                    cell.titleLabel.sizeToFit()
+
             }
                 
-                
-                
                             return cell
-                
-                
-                
-                
-                
-                
                 
             case 2:   //video
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: "NotesTableCell", for: indexPath) as! NotesTableCell
                 cell.titleLabel.text = subModuleArray[indexPath.row].title
-             //   cell.descriptionTextVIew.text = subModuleArray[indexPath.row].desc
+                cell.descriptiveTextVIew.text = subModuleArray[indexPath.row].desc
                 
-                cell.subTitleLabel.text = " Video session  "
+                cell.subTitleLabel.text = "  Reference Video  "
                // cell.bottomBlueButton.setTitle("  Watch Now  ", for: UIControlState())
-                cell.plusImageView.image = UIImage(named: "live_class1.PNG")
+                cell.plusImageView.image = UIImage(named: "video_icon.png")
                 
                 let part1 = NSMutableAttributedString(string: subModuleArray[indexPath.row].content_duration_formated , attributes: yourAttributes)
                 let combination = NSMutableAttributedString()
                 combination.append(NSAttributedString(string: "Duration : "))
                 combination.append(part1)
-              //  cell.durationLabel.attributedText = combination
+                cell.durationLabel.attributedText = combination
                 
                 let part2 = NSMutableAttributedString(string: subModuleArray[indexPath.row].start_date_label)
                 let part3 = NSMutableAttributedString(string: subModuleArray[indexPath.row].start_date_value, attributes: yourAttributes)
@@ -209,7 +225,7 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 
                 
                 
-                cell.leftBottomLabel.text = "completed"
+                cell.leftBottomLabel.text = "Completed"
                 cell.rightUpperLabel.text  =  "\(subModuleArray[indexPath.row].cnt_completed) Out of \(subModuleArray[indexPath.row].cnt_not_completed)"
                 
 //                cell.attendanceLabel.text = ""
@@ -231,6 +247,28 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 
 //
 //                cell.tag = 100 + indexPath.row
+                
+//                cell.layer.borderColor = UIColor.init(hexString:"D2D4D6").cgColor
+//                cell.layer.borderWidth = 1
+                cell.mainView.layer.borderColor = UIColor.init(hexString:"D2D4D6").cgColor
+                cell.mainView.layer.borderWidth = 1
+                cell.mainView.layer.cornerRadius = 3
+
+                cell.subTitleLabel.layer.cornerRadius = cell.subTitleLabel.frame.size.height/2
+                
+                
+//                cell.mainView.layer.shadowRadius = 1.5
+//                cell.mainView.layer.shadowColor = UIColor(red: CGFloat(245.0 / 255.0), green: CGFloat(245.0 / 255.0), blue: CGFloat(245.0 / 255.0), alpha: CGFloat(1.0)).cgColor
+//                cell.mainView.layer.shadowOffset = CGSize(width: CGFloat(0.0), height: CGFloat(0.0))
+//                cell.mainView.layer.shadowOpacity = 0.9
+//                cell.mainView.layer.masksToBounds = false
+//                let shadowInsets: UIEdgeInsets = UIEdgeInsetsMake(0, 0, -1.5, 0)
+//                let shadowPath = UIBezierPath(rect: UIEdgeInsetsInsetRect(cell.mainView.bounds, shadowInsets))
+//                cell.mainView.layer.shadowPath = shadowPath.cgPath
+ cell.subTitleLabel.clipsToBounds = true
+                cell.selectionStyle = .none
+//                cell.subTitleLabel.sizeToFit()
+//                cell.titleLabel.sizeToFit()
                             return cell
                 
                 
@@ -239,12 +277,13 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: "NotesTableCell", for: indexPath) as! NotesTableCell
                 cell.titleLabel.text = subModuleArray[indexPath.row].title
-               // cell.descriptionTextVIew.text = subModuleArray[indexPath.row].desc
-                
+                cell.descriptiveTextVIew.text = subModuleArray[indexPath.row].desc
+                cell.plusImageView.image = UIImage(named: "video_icon.png")
+
                 cell.subTitleLabel.text = "  Interactive Video  "
                // cell.bottomBlueButton.setTitle("  Attempted  ", for: UIControlState())
-                cell.plusImageView.image = UIImage(named: "live_class1.PNG")
-                //                cell.publishDateLabel.text = subModuleArray[indexPath.row].start_date_label + ":" + subModuleArray[indexPath.row].start_date_value
+                cell.plusImageView.image = UIImage(named: "live_class")
+                cell.publishDateLabel.text = subModuleArray[indexPath.row].start_date_label + ":" + subModuleArray[indexPath.row].start_date_value
                 
                 let part1 = NSMutableAttributedString(string: subModuleArray[indexPath.row].start_date_label)
                 let part2 = NSMutableAttributedString(string: subModuleArray[indexPath.row].start_date_value, attributes: yourAttributes)
@@ -264,8 +303,8 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 combination1.append(partTwo)
                 //cell.durationLabel.attributedText = combination1
                 
-                cell.leftBottomLabel.text = "completed"
-                cell.rightUpperLabel.text  =  "\(subModuleArray[indexPath.row].cnt_completed) + Out of  + \(subModuleArray[indexPath.row].cnt_not_completed)"
+                cell.leftBottomLabel.text = "Completed"
+                cell.rightUpperLabel.text  =  "\(subModuleArray[indexPath.row].cnt_completed) Out of \(subModuleArray[indexPath.row].cnt_not_completed)"
                 
 //                cell.attendanceLabel.text = ""
 //                cell.circleAttandanceLabel.text = ""
@@ -288,7 +327,31 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 
                 drawLineFromPoint(CGPoint(x: Double(cell.rightMiddleView.frame.size.width - 10) * (0/100), y: 20.0), ofColor: DataUtils.colorWithHexString("3bab14"), inView: (cell.rightMiddleView), String(describing: subModuleArray[indexPath.row].avg_completion_percentage))
                 cell.tag = 100 + indexPath.row
-                            return cell
+                
+//                cell.layer.borderColor = UIColor.init(hexString:"D2D4D6").cgColor
+//                cell.layer.borderWidth = 1
+                cell.mainView.layer.borderColor = UIColor.init(hexString:"D2D4D6").cgColor
+                cell.mainView.layer.borderWidth = 1
+                cell.mainView.layer.cornerRadius = 3
+
+                cell.subTitleLabel.layer.cornerRadius = cell.subTitleLabel.frame.size.height/2
+                
+//                
+//                cell.mainView.layer.shadowRadius = 1.5
+//                cell.mainView.layer.shadowColor = UIColor(red: CGFloat(245.0 / 255.0), green: CGFloat(245.0 / 255.0), blue: CGFloat(245.0 / 255.0), alpha: CGFloat(1.0)).cgColor
+//                cell.mainView.layer.shadowOffset = CGSize(width: CGFloat(0.0), height: CGFloat(0.0))
+//                cell.mainView.layer.shadowOpacity = 0.9
+//                cell.mainView.layer.masksToBounds = false
+//                let shadowInsets: UIEdgeInsets = UIEdgeInsetsMake(0, 0, -1.5, 0)
+//                let shadowPath = UIBezierPath(rect: UIEdgeInsetsInsetRect(cell.mainView.bounds, shadowInsets))
+//                cell.mainView.layer.shadowPath = shadowPath.cgPath
+//                cell.subTitleLabel.sizeToFit()
+//                cell.titleLabel.sizeToFit()
+                 cell.subTitleLabel.clipsToBounds = true
+                 cell.selectionStyle = .none
+                 return cell
+   
+                
             case 4: //assessment
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: "AssessmentTableCellCustom", for: indexPath) as! AssessmentTableCellCustom
@@ -298,7 +361,7 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 
                 cell.subtitleLabel.text = subModuleArray[indexPath.row].module_name
                 //cell.bottomBlueButton.setTitle("  Attempted  ", for: UIControlState())
-                cell.upperImageView.image = UIImage(named: "assessment1.png")
+                cell.upperImageView.image = UIImage(named: "assessmentnew")
                 
                 let partOne = NSMutableAttributedString(string: subModuleArray[indexPath.row].start_date_value, attributes: yourAttributes)
                 let partTwo = NSMutableAttributedString(string: subModuleArray[indexPath.row].end_date_value, attributes: yourAttributes)
@@ -321,7 +384,7 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 combination1.append(NSAttributedString(string: " | Max Marks : "))
                 combination1.append(partFive)
                 
-                cell.publicationLabel.attributedText = combination1
+                cell.questionLabel.attributedText = combination1
                 
                  cell.circleLabel.text = String(describing:subModuleArray[indexPath.row].avg_completion_percentage)
                 cell.circleLabel.text = cell.circleLabel.text! + "%"
@@ -335,8 +398,29 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 
                 //cell.studentnotAttemptedImageView.image = UIImage(named:"")
                 drawFullCircle(end: CGPoint(x: cell.circleLabel.frame.origin.x, y: 20.0), ofColor: DataUtils.colorWithHexString("3bab14"), inView: cell.circleLabel, completionPercentage: Double(subModuleArray[indexPath.row].avg_completion_percentage))
+               
+               
                 
                 cell.tag = 100 + indexPath.row
+              let partofMode = NSMutableAttributedString(string: subModuleArray[indexPath.row].test_type_label, attributes: yourAttributes)
+                
+                
+                
+                let combination2 = NSMutableAttributedString()
+                combination2.append(NSAttributedString(string: "Mode: "))
+                combination2.append(partofMode)
+                cell.modeLabel.attributedText = combination2
+               // cell.subtitleLabel.sizeToFit()
+                //cell.tittleLabel.sizeToFit()
+                
+                cell.mainUperView.layer.cornerRadius = 1
+                cell.mainUperView.layer.borderColor = UIColor.init(hexString:"D2D4D6").cgColor
+                cell.mainUperView.layer.borderWidth = 1
+                cell.mainUperView.layer.cornerRadius = 3
+
+                
+                
+                cell.selectionStyle = .none
                             return cell
                 
                 
@@ -346,7 +430,7 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 cell.titleLabel.text = subModuleArray[indexPath.row].title
                 cell.subtitleLabel.text = subModuleArray[indexPath.row].module_name
                 //cell.bottomBlueButton.setTitle("  View  ", for: UIControlState())
-                cell.upperImageView.image = UIImage(named: "Assignment1.png")
+                cell.upperImageView.image = UIImage(named: "assignmentnew.png")
                 
                 let part1 = NSMutableAttributedString(string: subModuleArray[indexPath.row].total_marks_label)
                 let part2 = NSMutableAttributedString(string: String(format : "%d",subModuleArray[indexPath.row].total_marks.intValue), attributes: yourAttributes)
@@ -373,7 +457,7 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 cell.typeLabelValueLabel.text = subModuleArray[indexPath.row].is_graded
                 cell.multipleSubmissionLabel.text = "Multiple Submission"
                 //cell.multipleSubmissionValueLabel.text = subModuleArray[indexPath.row].
-                //ask it          // cell.multipleSubmissionValueLabel.text =
+           //     ask it //cell.multipleSubmissionValueLabel.text =
                 cell.marksLabel.text = subModuleArray[indexPath.row].total_marks_label
                 
                 cell.marksValueLabel.text =  String(describing: subModuleArray[indexPath.row].total_marks)
@@ -397,11 +481,8 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 
                 cell.studentNotUploadLabel.text = "Stduents Not Uploaded"
                 
-                cell.studentNotImageView.image = UIImage(named:"")
-                
-                cell.studentImageView.image = UIImage(named:"")
-                
-                
+               
+                cell.secondDescriptiveLabel.text = subModuleArray[indexPath.row].desc
                 
                 
                 //draw circle
@@ -410,8 +491,14 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 
                 cell.circleLabel.text  =  String(describing: subModuleArray[indexPath.row].avg_completion_percentage)
                 cell.circleLabel.text =   cell.circleLabel.text! + "%"
-                //cell.circleLabel.text =
                 cell.tag = 100 + indexPath.row
+                cell.mainUpperView.layer.cornerRadius = 1
+                cell.mainUpperView.layer.borderColor = UIColor.init(hexString:"D2D4D6").cgColor
+                cell.mainUpperView.layer.borderWidth = 1
+                cell.mainUpperView.layer.cornerRadius = 3
+                cell.selectionStyle = .none
+             //   cell.subtitleLabel.sizeToFit()
+               // cell.titleLabel.sizeToFit()
                     return cell
             case 6:
                 
@@ -420,7 +507,7 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                // cell.descriptionTextVIew.text = subModuleArray[indexPath.row].desc
                 cell.subTitleLabel.text = "  Module Planner  "
                 cell.bottomBlueButton.setTitle("  View  ", for: UIControlState())
-                cell.plusImageView.image = UIImage(named: "live_class1.PNG")
+                cell.plusImageView.image = UIImage(named: "live_class.PNG")
                 cell.publishDateLabel.text = subModuleArray[indexPath.row].start_date_label + ":" + subModuleArray[indexPath.row].start_date_value
                 
                 let partOne = NSMutableAttributedString(string: String(format : "%d",subModuleArray[indexPath.row].notes_count.intValue), attributes: yourAttributes)
@@ -446,8 +533,9 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 cell.durationLabel.attributedText = combination1
                 
                 cell.tag = 100 + indexPath.row
-                
-                
+//                cell.subTitleLabel.sizeToFit()
+//                cell.titleLabel.sizeToFit()
+                cell.selectionStyle = .none
                 
                             return cell
                 
@@ -463,7 +551,7 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 
                 cell.subTitleLabel.text = subModuleArray[indexPath.row].module_name
                 //cell.bottomBlueButton.setTitle("  " + subModuleArray[indexPath.row].action + "  ", for: UIControlState())
-                cell.plusImageView.image = UIImage(named: "live_class1.PNG")
+                cell.plusImageView.image = UIImage(named: "live_class")
                 let partOne = NSMutableAttributedString(string: subModuleArray[indexPath.row].start_date, attributes: yourAttributes)
                 let partTwo = NSMutableAttributedString(string: subModuleArray[indexPath.row].content_duration_formated, attributes: yourAttributes)
                 let combination = NSMutableAttributedString()
@@ -502,7 +590,7 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 cell.rightUpperLabel.text = cell.rightUpperLabel.text!  + " Stduents"
                 
                 
-                //ask it             cell.descriptionTextVIew.text = subModuleArray[indexPath.row].description
+                        cell.descriptionTextVIew.text = subModuleArray[indexPath.row].desc
                 
                 cell.rightBottomLabel.text = "Recorded Sesssion"
                 
@@ -511,6 +599,17 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 drawLineFromPoint(CGPoint(x: Double(cell.rightMiddleView.frame.size.width - 10) * (0/100), y: 20.0), ofColor: DataUtils.colorWithHexString("3bab14"), inView: (cell.rightMiddleView), String(describing: subModuleArray[indexPath.row].participation_percentage_in_recorded_class))
                 drawLineFromPoint(CGPoint(x: Double(cell.leftMiddleView.frame.size.width - 10) * (0/100), y: 20.0), ofColor: DataUtils.colorWithHexString("3bab14"), inView: (cell.leftMiddleView), String(describing: subModuleArray[indexPath.row].participation_percentage_in_live_class))
                 cell.tag = 100 + indexPath.row
+                
+                
+                
+                cell.selectionStyle = .none
+                //cell.subTitleLabel.sizeToFit()
+                //cell.titleLabel.sizeToFit()
+                cell.mainUpperViewForCell.layer.cornerRadius = 1
+                cell.mainUpperViewForCell.layer.borderColor = UIColor.init(hexString:"D2D4D6").cgColor
+                cell.mainUpperViewForCell.layer.borderWidth = 1
+                cell.mainUpperViewForCell.layer.cornerRadius = 3
+
                             return cell
             case 8:
                 
@@ -532,6 +631,12 @@ class ExpandableModuleViewController: UIViewController  , UITableViewDataSource 
                 combination.append(partTwo)
                 cell.durationLabel.attributedText = combination
                 cell.tag = 100 + indexPath.row
+                cell.selectionStyle = .none
+//                cell.subTitleLabel.sizeToFit()
+//                cell.titleLabel.sizeToFit()
+                
+                
+                
                 
                             return cell
             default: break
@@ -725,55 +830,65 @@ return modulesTableView.dequeueReusableCell(withIdentifier: "hi")!
                 "token": ModelManager.singleton.loginData.token,
                 "deviceType": "IOS"
             ]
-            let str = String(format: "batch_id=%d&content_id=%d",self.selectedCourseObj.id.intValue,subModuleArray[indexPath.row].id.intValue)
-            ServerCommunication.singleton.requestWithPost(API_JOIN_LIVE_CLASS ,headerDict: headers, postString: str, success: { (successResponseDict) -> Void in
-                print(successResponseDict)
-                let cell = self.modulesTableView.cellForRow(at: indexPath) as! ModuleMajorInnerTableCell
-                if ((cell.bottomBlueButton.titleLabel?.text?.contains("Join")) == true) {
-                    if let url = URL(string: ((successResponseDict.value(forKeyPath: "resultData.URL") as? String)?
-                        .replacingOccurrences(of: "http", with: "connectpro"))!) {
-                        let isInstalled = UIApplication.shared.canOpenURL(url)
-                        if isInstalled {
-                            
-                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                            print("Installed")
-                            
-                        }else{
-                            let url1  = URL(string: "https://itunes.apple.com/us/app/adobe-connect/id430437503?mt=8")
-                            if UIApplication.shared.canOpenURL(url1!) == true  {
-                                UIApplication.shared.open(url1!, options: [:], completionHandler: nil)
-                            }
-                        }
-                    }
-                    
-                }else if (((cell.bottomBlueButton.titleLabel?.text?.contains("View Recorded")) == true) || ((cell.bottomBlueButton.titleLabel?.text?.contains("Concluded")) == true)){
-                    if let url = URL(string: ((successResponseDict.value(forKeyPath: "resultData.URL") as? String)?
-                        .replacingOccurrences(of: "http", with: "puffin"))!) {
-                        let isInstalled = UIApplication.shared.canOpenURL(url)
-                        if isInstalled {
-                            
-                            let tempURL = URL(string: "connectpro://www.google.com")
-                            let isInstalled1 = UIApplication.shared.canOpenURL(tempURL!)
-                            if !isInstalled1 {
-                                let url1  = URL(string: "https://itunes.apple.com/us/app/adobe-connect/id430437503?mt=8")
-                                if UIApplication.shared.canOpenURL(url1!) == true  {
-                                    UIApplication.shared.open(url1!, options: [:], completionHandler: nil)
-                                }
-                            }else{
-                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                                print("Installed")
-                            }
-                        }else{
-                            let url1  = URL(string: "https://itunes.apple.com/us/app/puffin-web-browser-free/id472937654?mt=8")
-                            if UIApplication.shared.canOpenURL(url1!) == true  {
-                                UIApplication.shared.open(url1!, options: [:], completionHandler: nil)
-                            }
-                        }
-                    }
-                }
-            }) { (errorResponseDict) -> Void in
-                DataUtils.showAlertMessage(errorResponseDict.value(forKey: "errDesc") as! String, withTitle: "", delegate: self)
-            }
+            
+            let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomControllerForLiveClasses") as! CustomControllerForLiveClasses
+            detailVC.selectedCourseObj = self.selectedCourseObj
+            detailVC.liveClassObj = self.subModuleArray[indexPath.row]
+            detailVC.content_type_id = self.subModuleArray[indexPath.row].content_type_id
+            detailVC.content_id = self.subModuleArray[indexPath.row].module_id
+            // detailVC.noteObj = noteObj
+            self.navigationController?.pushViewController(detailVC, animated: true)
+
+            
+//            let str = String(format: "batch_id=%d&content_id=%d",self.selectedCourseObj.id.intValue,subModuleArray[indexPath.row].id.intValue)
+//            ServerCommunication.singleton.requestWithPost(API_JOIN_LIVE_CLASS ,headerDict: headers, postString: str, success: { (successResponseDict) -> Void in
+//                print(successResponseDict)
+//                let cell = self.modulesTableView.cellForRow(at: indexPath) as! ModuleMajorInnerTableCell
+//                if ((cell.bottomBlueButton.titleLabel?.text?.contains("Join")) == true) {
+//                    if let url = URL(string: ((successResponseDict.value(forKeyPath: "resultData.URL") as? String)?
+//                        .replacingOccurrences(of: "http", with: "connectpro"))!) {
+//                        let isInstalled = UIApplication.shared.canOpenURL(url)
+//                        if isInstalled {
+//                            
+//                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//                            print("Installed")
+//                            
+//                        }else{
+//                            let url1  = URL(string: "https://itunes.apple.com/us/app/adobe-connect/id430437503?mt=8")
+//                            if UIApplication.shared.canOpenURL(url1!) == true  {
+//                                UIApplication.shared.open(url1!, options: [:], completionHandler: nil)
+//                            }
+//                        }
+//                    }
+//                    
+//                }else if (((cell.bottomBlueButton.titleLabel?.text?.contains("View Recorded")) == true) || ((cell.bottomBlueButton.titleLabel?.text?.contains("Concluded")) == true)){
+//                    if let url = URL(string: ((successResponseDict.value(forKeyPath: "resultData.URL") as? String)?
+//                        .replacingOccurrences(of: "http", with: "puffin"))!) {
+//                        let isInstalled = UIApplication.shared.canOpenURL(url)
+//                        if isInstalled {
+//                            
+//                            let tempURL = URL(string: "connectpro://www.google.com")
+//                            let isInstalled1 = UIApplication.shared.canOpenURL(tempURL!)
+//                            if !isInstalled1 {
+//                                let url1  = URL(string: "https://itunes.apple.com/us/app/adobe-connect/id430437503?mt=8")
+//                                if UIApplication.shared.canOpenURL(url1!) == true  {
+//                                    UIApplication.shared.open(url1!, options: [:], completionHandler: nil)
+//                                }
+//                            }else{
+//                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//                                print("Installed")
+//                            }
+//                        }else{
+//                            let url1  = URL(string: "https://itunes.apple.com/us/app/puffin-web-browser-free/id472937654?mt=8")
+//                            if UIApplication.shared.canOpenURL(url1!) == true  {
+//                                UIApplication.shared.open(url1!, options: [:], completionHandler: nil)
+//                            }
+//                        }
+//                    }
+//                }
+//            }) { (errorResponseDict) -> Void in
+//                DataUtils.showAlertMessage(errorResponseDict.value(forKey: "errDesc") as! String, withTitle: "", delegate: self)
+//            }
         case 8:
             let headers : [String:String] = [
                 "user_id": String(format: "%d", ModelManager.singleton.loginData.resultData.user.userId.intValue),
@@ -800,10 +915,19 @@ return modulesTableView.dequeueReusableCell(withIdentifier: "hi")!
         }
 
     }
+    
+//    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 0.00001
+//    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.00001
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width - 0, height: 80))
-        let headerSubView = UIView(frame: CGRect(x: 10, y: 5, width: tableView.frame.size.width - 20, height: 70))
-        let headerLabel = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.frame.size.width - 80, height: 70))
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width - 0, height: 50))
+        let headerSubView = UIView(frame: CGRect(x: 10, y: 5, width: tableView.frame.size.width - 20, height: 40))
+        let headerLabel = UILabel(frame: CGRect(x: 15, y: 5, width: tableView.frame.size.width - 80, height: 40))
         headerSubView.backgroundColor = UIColor.white
         headerView.addSubview(headerSubView)
         headerLabel.font = UIFont.boldSystemFont(ofSize: 13)
@@ -812,7 +936,7 @@ return modulesTableView.dequeueReusableCell(withIdentifier: "hi")!
         headerLabel.lineBreakMode = .byWordWrapping
         headerLabel.text = modulesArray[section].name
         headerView.addSubview(headerLabel)
-        let headerButton = UIButton(frame: CGRect(x: tableView.frame.size.width - 50, y: 25, width: 30, height: 30))
+        let headerButton = UIButton(frame: CGRect(x: tableView.frame.size.width - 50, y: 8, width: 30, height: 30))
         headerButton.setImage(modulesArray[section].is_default_open.boolValue == true ? UIImage(named : "minus_icon.png") : UIImage(named : "plus.png"), for: UIControlState())
         headerButton.setTitleColor(UIColor.darkGray, for: UIControlState())
         headerButton.tag = section
@@ -829,18 +953,18 @@ return modulesTableView.dequeueReusableCell(withIdentifier: "hi")!
             
         case 1,2,3:
             let addedWidth:CGFloat = DataUtils.getDynamicHeight(subModuleArray[indexPath.row].desc, width: tableView.frame.size.width - 50)
-            return 300+addedWidth
+            return 226 + addedWidth
             
         case 4: //assessment
             let addedWidth:CGFloat = DataUtils.getDynamicHeight(subModuleArray[indexPath.row].desc, width: tableView.frame.size.width - 50)
-            return 350+addedWidth
+            return 280+addedWidth
         case 5:
             let addedWidth:CGFloat = DataUtils.getDynamicHeight(subModuleArray[indexPath.row].desc, width: tableView.frame.size.width - 50)
-            return 550+addedWidth
+            return 295 + addedWidth
         case 7:
             
             let addedWidth:CGFloat = DataUtils.getDynamicHeight(subModuleArray[indexPath.row].desc, width: tableView.frame.size.width - 50)
-            return 310+addedWidth
+            return 270+addedWidth
 
         default:
             let addedWidth:CGFloat = DataUtils.getDynamicHeight(subModuleArray[indexPath.row].desc, width: tableView.frame.size.width - 50)
@@ -848,8 +972,7 @@ return modulesTableView.dequeueReusableCell(withIdentifier: "hi")!
         }
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return  80.0
-
+        return  60.0
     }
     
     func extractButtonAction (_ sender : UIButton) {
@@ -887,33 +1010,35 @@ return modulesTableView.dequeueReusableCell(withIdentifier: "hi")!
     }
     func drawFullCircle(end:CGPoint, ofColor lineColor: UIColor, inView view:UIView, completionPercentage : Double)
     {
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: view.frame.size.width/2,y: view.frame.size.height/2), radius: CGFloat(20), startAngle: CGFloat(M_PI/2), endAngle:CGFloat(M_PI/2 + M_PI*2), clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: view.frame.size.width/2,y: view.frame.size.height/2), radius: CGFloat(24), startAngle: CGFloat(M_PI/2), endAngle:CGFloat(M_PI/2 + M_PI*2), clockwise: true)
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = circlePath.cgPath
         //shapeLayer.lineDashPattern = [5 ,5]
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = UIColor.white.cgColor
-        shapeLayer.lineWidth = 1.0
+        shapeLayer.lineWidth = 5.0
         let shapeLayer1 = CAShapeLayer()
         shapeLayer1.path = circlePath.cgPath
         shapeLayer1.fillColor = UIColor.clear.cgColor
         shapeLayer1.strokeColor = UIColor.lightGray.cgColor
-        shapeLayer1.lineWidth = 1.0
+        shapeLayer1.strokeColor = UIColor.init(hexString:"D2D4D6").cgColor
+        shapeLayer1.lineWidth = 5.0
         // shapeLayer1.addSublayer(shapeLayer)
         
         let angle = completionPercentage * 3.6
-        let circlePath1 = UIBezierPath(arcCenter: CGPoint(x: view.frame.size.width/2,y: view.frame.size.height/2), radius: CGFloat(20), startAngle: CGFloat(M_PI/2), endAngle:CGFloat(((90 + angle)/180)*M_PI), clockwise: true)
+        let circlePath1 = UIBezierPath(arcCenter: CGPoint(x: view.frame.size.width/2,y: view.frame.size.height/2), radius: CGFloat(24), startAngle: CGFloat(M_PI/2), endAngle:CGFloat(((90 + angle)/180)*M_PI), clockwise: true)
         let shapeLayer2 = CAShapeLayer()
         shapeLayer2.path = circlePath1.cgPath
         // shapeLayer2.lineDashPattern = [5 ,5]
         shapeLayer2.fillColor = UIColor.clear.cgColor
         shapeLayer2.strokeColor = UIColor.white.cgColor
-        shapeLayer2.lineWidth = 1.0
+        shapeLayer2.lineWidth = 5.0
         let shapeLayer3 = CAShapeLayer()
         shapeLayer3.path = circlePath1.cgPath
         shapeLayer3.fillColor = UIColor.clear.cgColor
         shapeLayer3.strokeColor = UIColor.green.cgColor
-        shapeLayer3.lineWidth = 1.0
+        shapeLayer3.strokeColor = UIColor.init(hexString :"2F9DD4").cgColor
+        shapeLayer3.lineWidth = 5.0
         // shapeLayer3.addSublayer(shapeLayer2)
         view.layer.addSublayer(shapeLayer1)
         view.layer.addSublayer(shapeLayer3)
@@ -930,8 +1055,9 @@ return modulesTableView.dequeueReusableCell(withIdentifier: "hi")!
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
         shapeLayer.strokeColor = lineColor.cgColor
-        shapeLayer.lineWidth = 10.0
+        shapeLayer.strokeColor = UIColor.init(hexString :"2F9DD4").cgColor
         
+        shapeLayer.lineWidth = 10.0
         let path1 = UIBezierPath()
         path1.move(to: CGPoint(x: 0, y: 0))
         path1.addLine(to: CGPoint(x: view.frame.size.width, y: 0))
@@ -939,6 +1065,7 @@ return modulesTableView.dequeueReusableCell(withIdentifier: "hi")!
         let shapeLayer1 = CAShapeLayer()
         shapeLayer1.path = path1.cgPath
         shapeLayer1.strokeColor = UIColor.lightGray.cgColor
+        shapeLayer1.strokeColor = UIColor.init(hexString:"D2D4D6").cgColor
         shapeLayer1.lineWidth = 10.0
         //        shapeLayer1.addSublayer(shapeLayer)
         view.layer.addSublayer(shapeLayer1)

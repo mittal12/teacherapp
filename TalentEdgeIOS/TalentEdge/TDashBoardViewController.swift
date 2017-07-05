@@ -72,7 +72,7 @@ class TDashBoardViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0
+        return 0.0000001
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -80,7 +80,7 @@ class TDashBoardViewController: UIViewController,UITableViewDelegate,UITableView
             return UIView(frame: CGRect(x:tableView.frame.size.width,y:0,width:tableView.frame.size.width,height:0))
             
         }else {
-            let view = UIView(frame: CGRect(x:0,y:0,width:220,height:60))
+            let view = UIView(frame: CGRect(x:0,y:0,width:220,height:50))
             let label = UILabel(frame: CGRect(x:(UIScreen.main.bounds.size.width/2) - 110,y:0,width:200,height:50))
             
             label.text = "COURSE COMPLETED"
@@ -162,6 +162,7 @@ class TDashBoardViewController: UIViewController,UITableViewDelegate,UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
          let courseObj = indexPath.section == 0 ? myCourseList.facultyOngoingCourse[indexPath.row] as! TECourseData : myCourseList.facultyCompletedCourse[indexPath.row] as! TECourseData
+        
         let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TMyCourseDetailViewController") as! TMyCourseDetailViewController
         
         
@@ -186,7 +187,7 @@ class TDashBoardViewController: UIViewController,UITableViewDelegate,UITableView
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if(section == 1){
-        return 60
+        return 40
         }
         else{
         return 0
@@ -808,8 +809,10 @@ class TDashBoardViewController: UIViewController,UITableViewDelegate,UITableView
         view.layer.addSublayer(shapeLayer1)
         view.layer.addSublayer(shapeLayer)
     }
+    
     func cornerLayouts()
     {
+        
     }
 
     

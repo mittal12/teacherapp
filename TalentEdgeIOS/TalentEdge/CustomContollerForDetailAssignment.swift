@@ -14,9 +14,10 @@ class CustomContollerForDetailAssignment: UIViewController ,UITableViewDelegate 
     
     @IBOutlet weak var mostUpperView: UIView!
     
-    
+    @IBOutlet weak var subNavLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var checkBoxImageView: UIButton!
     
     @IBOutlet weak var upperImageView: UIImageView!
     
@@ -101,7 +102,12 @@ class CustomContollerForDetailAssignment: UIViewController ,UITableViewDelegate 
         assignmentDetailObj = AssignmentDetailModel()
         tableView.showsVerticalScrollIndicator = false
         tableView.tableFooterView = UIView()
-
+        self.tableView.separatorStyle = .none
+        self.mainScrollView.isHidden = true
+        self.mostUpperView.layer.cornerRadius = 3
+        self.subNavLabel.text = assignmentObj.module_name
+        //self.subNavLabel.text =
+       // self.mainScrollView.addScalableCover(with: ModelManager.singleton.courseImage)
 
         // Do any additional setup after loading the view.
     }
@@ -121,6 +127,7 @@ class CustomContollerForDetailAssignment: UIViewController ,UITableViewDelegate 
         ServerCommunication.singleton.requestWithPost(API_NOTES_DETAILS ,headerDict: headers, postString: str, success: { (successResponseDict) -> Void in
             print(successResponseDict)
             self.assignmentDetailObj = (JSONOBJECTPARSER.parseJsonData(DataUtils.convertStringForAltaObjectParser("AssignmentDetailModel"), jsonData: successResponseDict.value(forKey: "resultData") as! NSDictionary) as! AssignmentDetailModel?)!
+           self.mainScrollView.isHidden = false
             self.setUpUIUpperView()
             self.tableView.reloadData()
         self.heightForTableView.constant = self.tableView.contentSize.height
@@ -138,7 +145,7 @@ class CustomContollerForDetailAssignment: UIViewController ,UITableViewDelegate 
         self.tiitleLabel.text = assignmentObj.title
         self.subTitleLabel.text = assignmentObj.module_name
         //cell.bottomBlueButton.setTitle("  View  ", for: UIControlState())
-        self.upperImageView.image = UIImage(named: "Assignment1.png")
+        self.upperImageView.image = UIImage(named: "assignmentnew")
         
         let part1 = NSMutableAttributedString(string: assignmentObj.total_marks_label)
         let part2 = NSMutableAttributedString(string: String(format : "%d",assignmentObj.total_marks.intValue), attributes: yourAttributes)
@@ -164,36 +171,32 @@ class CustomContollerForDetailAssignment: UIViewController ,UITableViewDelegate 
         self.typeValueLabel.text = assignmentObj.is_graded
         self.multipleSubmissionLabel.text = "Multiple Submission"
         //cell.multipleSubmissionValueLabel.text = subModuleArray[indexPath.row].
-        //ask it          // cell.multipleSubmissionValueLabel.text =
+       //ask it // cell.multipleSubmissionValueLabel.text =
         self.maxMarksLabel.text = assignmentObj.total_marks_label
         
-        self.maxMarksLabel.text =  self.maxMarksLabel.text! + String(describing: assignmentObj.total_marks)
-        
+       // self.maxMarksLabel.text =  self.maxMarksLabel.text! + String(describing: assignmentObj.total_marks)
+        self.marksValueLabel.text = String(describing: assignmentObj.total_marks)
+
         self.passingMarksLabel.text = assignmentObj.passing_marks_label
         
-         self.passingMarksLabel.text =  self.passingMarksLabel.text! + assignmentObj.passing_marks
+         //self.passingMarksLabel.text =  self.passingMarksLabel.text! + assignmentObj.passing_marks
+        self.passingMarksValueLabel.text = assignmentObj.passing_marks
         self.modeLabel.text  = "Mode"
         
-         self.modeLabel.text =   self.modeLabel.text! + assignmentObj.submission_mode
+      //   self.modeLabel.text =   self.modeLabel.text! + assignmentObj.submission_mode
         
-        //ask it       //       cell.secondDescriptiveLabel.text =  String(subModuleArray[indexPath.row].desc)
+        self.modeValueLabel.text = assignmentObj.submission_mode
+        self.DescriptionLabel.text =  assignmentObj.desc
         
         self.completedLabel.text = "Completed"
         
         self.StudentNotUploadedValueLabel.text =  String(describing: assignmentObj.cnt_not_submitted)
         
         self.studentUploadedValueLabel.text = String(describing: assignmentObj.cnt_submitted)
-        
         self.studentUploadLabel.text = "Students Uploaded"
+        //self.studentUploadLabel.text = "Students Uploaded"
         
-        self.studentNotUploadedLabel.text = "Stduents Not Uploaded"
-        
-        self.studentUploadedImageView.image = UIImage(named:"")
-        
-        self.studentUploadedImageView.image = UIImage(named:"")
-        
-        
-        
+        self.studentNotUploadedLabel.text = "Students Not Uploaded"
         
         //draw circle
         //  cell.circleAttandanceLabel
@@ -212,12 +215,13 @@ class CustomContollerForDetailAssignment: UIViewController ,UITableViewDelegate 
         //shapeLayer.lineDashPattern = [5 ,5]
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = UIColor.white.cgColor
-        shapeLayer.lineWidth = 1.0
+        shapeLayer.lineWidth = 5.0
         let shapeLayer1 = CAShapeLayer()
         shapeLayer1.path = circlePath.cgPath
         shapeLayer1.fillColor = UIColor.clear.cgColor
         shapeLayer1.strokeColor = UIColor.lightGray.cgColor
-        shapeLayer1.lineWidth = 1.0
+        shapeLayer1.strokeColor = UIColor.init(hexString: "D2D4D6").cgColor
+        shapeLayer1.lineWidth = 5.0
         // shapeLayer1.addSublayer(shapeLayer)
         
         let angle = completionPercentage * 3.6
@@ -227,12 +231,13 @@ class CustomContollerForDetailAssignment: UIViewController ,UITableViewDelegate 
         // shapeLayer2.lineDashPattern = [5 ,5]
         shapeLayer2.fillColor = UIColor.clear.cgColor
         shapeLayer2.strokeColor = UIColor.white.cgColor
-        shapeLayer2.lineWidth = 1.0
+        shapeLayer2.lineWidth = 5.0
         let shapeLayer3 = CAShapeLayer()
         shapeLayer3.path = circlePath1.cgPath
         shapeLayer3.fillColor = UIColor.clear.cgColor
         shapeLayer3.strokeColor = UIColor.green.cgColor
-        shapeLayer3.lineWidth = 1.0
+         shapeLayer3.strokeColor = UIColor.init(hexString: "2F9DD4").cgColor
+        shapeLayer3.lineWidth = 5.0
         // shapeLayer3.addSublayer(shapeLayer2)
         view.layer.addSublayer(shapeLayer1)
         view.layer.addSublayer(shapeLayer3)
@@ -249,6 +254,7 @@ class CustomContollerForDetailAssignment: UIViewController ,UITableViewDelegate 
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
         shapeLayer.strokeColor = lineColor.cgColor
+        shapeLayer.strokeColor = UIColor.init(hexString: "2F9DD4").cgColor
         shapeLayer.lineWidth = 10.0
         
         let path1 = UIBezierPath()
@@ -258,12 +264,42 @@ class CustomContollerForDetailAssignment: UIViewController ,UITableViewDelegate 
         let shapeLayer1 = CAShapeLayer()
         shapeLayer1.path = path1.cgPath
         shapeLayer1.strokeColor = UIColor.lightGray.cgColor
+        shapeLayer1.strokeColor = UIColor.init(hexString: "D2D4D6").cgColor
         shapeLayer1.lineWidth = 10.0
         //        shapeLayer1.addSublayer(shapeLayer)
         view.layer.addSublayer(shapeLayer1)
         view.layer.addSublayer(shapeLayer)
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        /*
+         
+         private void downloadFlow(ListViewHolder mHolder, StudentListModel cModel) {
+         final String uploadPath = cModel.getUploadPath();
+         if (!StringUtils.isNullOrEmpty(uploadPath)) {
+         final String fileName = uploadPath.substring(uploadPath.lastIndexOf('/') + 1, uploadPath.length());
+         mHolder.downloadBtn.setText("" + fileName);
+         
+         mHolder.downloadBtn.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View view) {
+         fragment.downloadFile(uploadPath, fileName);
+         }
+         });
+         mHolder.downloadBtn.setTextColor(Color.BLACK);
+         mHolder.downloadBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.download_icon, 0, 0, 0);
+         } else {
+         mHolder.downloadBtn.setText("Yet to submit");
+         mHolder.downloadBtn.setTextColor(Color.RED);
+         mHolder.downloadBtn.setOnClickListener(null);
+         mHolder.downloadBtn.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+         }
+         }
+
+         
+            */
+       // self.mostUpperViewHeight.constant = self.completedLabel.frame.origin.y + self.completedLabel.frame.size.height + 40
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -279,13 +315,231 @@ class CustomContollerForDetailAssignment: UIViewController ,UITableViewDelegate 
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableCellForAssignmentDetails", for: indexPath) as! CustomTableCellForAssignmentDetails
         
+//        "user_id": "34",
+//        "fname": "Vishal",
+//        "lname": "Sharma",
+//        "email": "virendra.bhardwaj@talentedge.in",
+//        "pic": "http://localhost/LMS/files/profile/original_1374833708.jpg",
+//        "submission_id": "47",
+//        "is_received": "1",
+//        "upload_path": "",
+//        "uploaded_date": "",
+//        "uploaded_date_formatted": "",
+//        "marks_given_by_faculty": "Y",
+//        "assignment_marks": "91",
+//        "reviewed_date": "2017-04-11 12:55:11",
+//        "reviewed_date_formatted": "Apr 11, 2017 12:55 PM"
+//        
+        
+        
+        
+        /*
+         
+         if ("Graded".equalsIgnoreCase(aModel.getIsGraded())) {
+         if ("Online".equalsIgnoreCase(aModel.getSubmissionMode()) && StringUtils.isNullOrEmpty(cModel.getSubmissionId())) {
+         // online-graded- not submitted
+         mHolder.markCheckBox.setVisibility(View.GONE);
+         mHolder.addMarks.setVisibility(View.GONE);
+         mHolder.rltMarks.setVisibility(View.GONE);
+         mHolder.downloadBtn.setVisibility(View.VISIBLE);
+         mHolder.downloadBtn.setText("Yet to submit");
+         mHolder.downloadBtn.setTextColor(Color.RED);
+         mHolder.downloadBtn.setOnClickListener(null);
+         mHolder.downloadBtn.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+         } else {
+         // online submitted -or- offline any - graded
+         mHolder.markCheckBox.setVisibility(View.VISIBLE);
+         mHolder.addMarks.setVisibility(View.VISIBLE);
+         
+         if (!StringUtils.isNullOrEmpty(cModel.getAssignmentMarks())) {
+         mHolder.rltMarks.setVisibility(View.VISIBLE);
+         mHolder.progressMarks.setProgress(Integer.parseInt(cModel.getAssignmentMarks()));
+         mHolder.progressMarks.setMax(Integer.parseInt(aModel.getTotalMarks()));
+         mHolder.txvMarksPercent.setText(aModel.getTotalMarks());
+         mHolder.addMarks.setText("Edit Marks");
+         } else {
+         mHolder.rltMarks.setVisibility(View.GONE);
+         mHolder.addMarks.setText("Add Marks");
+         }
+         }
+         } else {
+         // not graded case
+         mHolder.markCheckBox.setVisibility(View.VISIBLE);
+         mHolder.addMarks.setVisibility(View.GONE);
+         mHolder.rltMarks.setVisibility(View.GONE);
+         }
+         
+         if ("Online".equalsIgnoreCase(aModel.getSubmissionMode())) {
+         mHolder.downloadBtn.setVisibility(View.VISIBLE);
+         downloadFlow(mHolder, cModel);
+         } else {
+         mHolder.downloadBtn.setVisibility(View.GONE);
+         }
+         
+         
+ */
+        
+        
+        
+     
+        
+        if("Graded".caseInsensitiveCompare(assignmentObj.is_graded) == ComparisonResult.orderedSame){
+            
+            if("online".caseInsensitiveCompare(assignmentObj.submission_mode) == ComparisonResult.orderedSame && (assignmentDetailObj?.student_submission_info[indexPath.row] as! student_submission_info).submission_id == "")
+             {
+// make it uncommented                
+                cell.checkBoxImageView.isHidden = true
+
+                cell.assignmentNameLabel.text  = "Yet to submit"
+                cell.assignmentNameLabel.textColor = .red
+                
+                cell.downloadButton.isHidden = false
+                cell.circleLabel.isHidden = true
+                cell.buttomButton.isHidden =  true
+    // set the text yet to submitted           //cell.
+                
+                
+                
+                
+             }
+            else
+            {
+              
+                
+                
+                
+                
+                
+ // make it uncommented  
+               cell.checkBoxImageView.isHidden = false
+               cell.buttomButton.isHidden  = false
+                
+                
+                
+       if((assignmentDetailObj?.student_submission_info[indexPath.row] as! student_submission_info).assignment_marks != "")
+       {
+        
+        cell.circleLabel.isHidden = false
+        cell.circleLabel.text = (assignmentDetailObj?.student_submission_info[indexPath.row] as! student_submission_info).assignment_marks
+        drawFullCircle(end: CGPoint(x: self.circleLabel.frame.origin.x, y: 20.0), ofColor: DataUtils.colorWithHexString("3bab14"), inView: self.circleLabel, completionPercentage: Double((assignmentDetailObj?.student_submission_info[indexPath.row] as! student_submission_info).assignment_marks)!)
+        cell.buttomButton.setTitle("Edit Marks", for: .normal)
+        
+        }
+       else {
+//        mHolder.rltMarks.setVisibility(View.GONE);
+//        mHolder.addMarks.setText("Add Marks");
+        
+        
+      
+        cell.circleLabel.isHidden = true
+        cell.buttomButton.setTitle("Add Marks", for: .normal)
+            }
+        }
+        
+        
+    }
+        else {
+            // not graded case
+         
+         // make it uncommented            
+             cell.checkBoxImageView.isHidden = false
+            cell.circleLabel.isHidden = true
+            cell.buttomButton.isHidden  = true
+            
+
+        }
+
+    if("Online".caseInsensitiveCompare(assignmentObj.submission_mode) == ComparisonResult.orderedSame)
+       {
+        cell.downloadButton.isHidden = false
+        }
+        
+        else
+       {cell.downloadButton.isHidden  = true
+        
+        }
+        
+    
+    
+            
+            
+    
+        /*
+         
+         if ("Graded".equalsIgnoreCase(aModel.getIsGraded())) {
+         if ("Online".equalsIgnoreCase(aModel.getSubmissionMode()) && StringUtils.isNullOrEmpty(cModel.getSubmissionId())) {
+         // online-graded- not submitted
+         mHolder.markCheckBox.setVisibility(View.GONE);
+         mHolder.addMarks.setVisibility(View.GONE);
+         mHolder.rltMarks.setVisibility(View.GONE);
+         mHolder.downloadBtn.setVisibility(View.VISIBLE);
+         mHolder.downloadBtn.setText("Yet to submit");
+         mHolder.downloadBtn.setTextColor(Color.RED);
+         mHolder.downloadBtn.setOnClickListener(null);
+         mHolder.downloadBtn.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+         } else {
+         // online submitted -or- offline - but - graded
+         mHolder.markCheckBox.setVisibility(View.VISIBLE);
+         mHolder.addMarks.setVisibility(View.VISIBLE);
+         
+         if (!StringUtils.isNullOrEmpty(cModel.getAssignmentMarks())) {
+         mHolder.rltMarks.setVisibility(View.VISIBLE);
+         mHolder.progressMarks.setProgress(Integer.parseInt(cModel.getAssignmentMarks()));
+         mHolder.progressMarks.setMax(Integer.parseInt(aModel.getTotalMarks()));
+         mHolder.txvMarksPercent.setText(aModel.getTotalMarks());
+         mHolder.addMarks.setText("Edit Marks");
+         } else {
+         mHolder.rltMarks.setVisibility(View.GONE);
+         mHolder.addMarks.setText("Add Marks");
+         }
+         }
+         } else {
+         // not graded case
+         mHolder.markCheckBox.setVisibility(View.VISIBLE);
+         mHolder.addMarks.setVisibility(View.GONE);
+         mHolder.rltMarks.setVisibility(View.GONE);
+         }
+         
+         if ("Online".equalsIgnoreCase(aModel.getSubmissionMode())) {
+         mHolder.downloadBtn.setVisibility(View.VISIBLE);
+         downloadFlow(mHolder, cModel);
+         } else {
+         mHolder.downloadBtn.setVisibility(View.GONE);
+         }
+         
+         
+         
+         
+         
+         
+         
+         
+         */
+        
+        
+        
+  
         cell.submittedOnLabel.text = "Submitted on:" + (assignmentDetailObj?.student_submission_info[indexPath.row] as! student_submission_info).reviewed_date_formatted
-        cell.nameLabel.text =  (assignmentDetailObj?.student_submission_info[indexPath.row] as! student_submission_info).fname
-        cell.nameLabel.text = cell.nameLabel.text! + (assignmentDetailObj?.student_submission_info[indexPath.row] as! student_submission_info).lname
+        cell.nameLabel.text =  (assignmentDetailObj?.student_submission_info[indexPath.row] as! student_submission_info).fname + " "
+        cell.nameLabel.text! = cell.nameLabel.text! + (assignmentDetailObj?.student_submission_info[indexPath.row] as! student_submission_info).lname
         cell.markAsRecievedLabel.text = "Mark as received"
+        cell.buttomButton.layer.cornerRadius = cell.buttomButton.frame.size.height/2
+        cell.buttomButton.layer.borderColor = UIColor.init(hexString: "2D9FF4").cgColor
+        cell.buttomButton.layer.borderWidth = 2
+        
     //complete it // cell.assignmentNameLabel.text =
     //complete it //    cell.upperImageView.image = UIImage(named:"")
+        
+     
+        cell.upperImageView.sd_setImage(with: URL(string: (assignmentDetailObj?.student_submission_info[indexPath.row] as! student_submission_info).pic))
+        
+        
         //drawFullCircle(end: CGPoint(x: cell.circleLabel.frame.origin.x, y: 20.0), ofColor: DataUtils.colorWithHexString("3bab14"), inView: cell.circleLabel, completionPercentage: Double((assignmentDetailObj?.student_submission_info[indexPath.row] as! student_submission_info).assignment_marks)!)
+        
+        cell.upperImageView.layer.cornerRadius = cell.upperImageView.frame.size.height/2
+        cell.upperImageView.clipsToBounds = true
+        cell.upperViewForTableCell.layer.cornerRadius = 3
+        cell.selectionStyle = .none
         return cell
 
     }
@@ -299,10 +553,12 @@ class CustomContollerForDetailAssignment: UIViewController ,UITableViewDelegate 
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 140
     }
     
-    @IBAction func readButtonTapped(_ sender: Any) {
+    
+    @IBAction func readButtonTapped1(_ sender: Any) {
+        
         if(isExpanded == true)
         {
             
@@ -313,15 +569,41 @@ class CustomContollerForDetailAssignment: UIViewController ,UITableViewDelegate 
         }
         else
         {
-            self.innerViewHeight.constant = 226
+            let addedWidth:CGFloat = DataUtils.getDynamicHeight(self.DescriptionLabel.text!, width: tableView.frame.size.width - 40)
+            self.innerViewHeight.constant = 113 + addedWidth
+
+          //  self.innerViewHeight.constant = 226
             self.mostUpperViewHeight.constant = mostUpperViewHeight.constant + self.innerViewHeight.constant
             isExpanded = true
             self.readButton.setTitle("READ LESS", for: .normal)
-            
         }
 
     }
+    @IBAction func readButtonTapped(_ sender: Any) {
+        
+           }
     
     
+    @IBAction func readButtonTapped2(_ sender: Any) {
+        if(isExpanded == true)
+        {
+            
+            self.mostUpperViewHeight.constant = mostUpperViewHeight.constant - self.innerViewHeight.constant
+            self.innerViewHeight.constant = 0
+            isExpanded = false
+            self.readButton.setTitle("READ MORE", for: .normal)
+        }
+        else
+        {
+            let addedWidth:CGFloat = DataUtils.getDynamicHeight(self.DescriptionLabel.text!, width: tableView.frame.size.width - 40)
+            self.innerViewHeight.constant = 113 + addedWidth
+            
+            //  self.innerViewHeight.constant = 226
+            self.mostUpperViewHeight.constant = mostUpperViewHeight.constant + self.innerViewHeight.constant
+            isExpanded = true
+            self.readButton.setTitle("READ LESS", for: .normal)
+        }
+
+    }
     
 }

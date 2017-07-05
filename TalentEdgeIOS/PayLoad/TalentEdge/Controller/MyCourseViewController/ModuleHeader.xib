@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E163f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModuleHeader" customModule="TalentEdge" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="ModuleHeader" customModule="TalentEdge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YG-nW-w3H">
+                    <rect key="frame" x="7" y="20" width="297" height="50"/>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="eWM-ZR-kny"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NY-bB-Gad">
+                    <rect key="frame" x="319" y="25" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="gPd-S5-YgB"/>
+                        <constraint firstAttribute="height" constant="40" id="pj8-Lz-l9b"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6YG-nW-w3H" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="7" id="IAh-h4-vWR"/>
+                <constraint firstAttribute="bottom" secondItem="6YG-nW-w3H" secondAttribute="bottom" constant="10" id="VKG-3X-h5C"/>
+                <constraint firstItem="5NY-bB-Gad" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="cUc-H5-uEh"/>
+                <constraint firstItem="5NY-bB-Gad" firstAttribute="leading" secondItem="6YG-nW-w3H" secondAttribute="trailing" constant="15" id="gyH-VL-8i2"/>
+                <constraint firstItem="6YG-nW-w3H" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="iPJ-jG-t2K"/>
+                <constraint firstAttribute="trailing" secondItem="5NY-bB-Gad" secondAttribute="trailing" constant="16" id="jSL-94-odT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="extractButton" destination="5NY-bB-Gad" id="EwC-zv-2TO"/>
+                <outlet property="nameLabel" destination="6YG-nW-w3H" id="5W3-c9-H2k"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="-241"/>
+        </view>
+    </objects>
+</document>

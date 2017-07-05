@@ -10,9 +10,6 @@ import UIKit
 
 class CustomControllerForLiveClassDetails: UIViewController {
 
-    
-    
-    
     var live_classDetailObj : LiveClassDetailsModel?
     
     var isCameFromDrawer : Bool!
@@ -160,6 +157,7 @@ class CustomControllerForLiveClassDetails: UIViewController {
         shapeLayer3.path = circlePath1.cgPath
         shapeLayer3.fillColor = UIColor.clear.cgColor
         shapeLayer3.strokeColor = UIColor.green.cgColor
+       // shapeLayer3.strokeColor = UIColor.init(hexString: "2")
         shapeLayer3.lineWidth = 1.0
         // shapeLayer3.addSublayer(shapeLayer2)
         view.layer.addSublayer(shapeLayer1)
@@ -198,13 +196,13 @@ class CustomControllerForLiveClassDetails: UIViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
-       // return (live_classDetailObj?.student_attempt_info.count)!
+       
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableCellForAssignmentDetails", for: indexPath) as! CustomTableCellForAssignmentDetails
-        
+       // cell.dataModel = (live_classDetailObj?.student_session_info[indexPath.row].time_details)
 //        cell.submittedOnLabel.text = "Submitted on:" + (assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).name
 //        cell.nameLabel.text =  (assessmentDetailObj?.student_submission_info[indexPath.row] as! student_attempt_info).name
 //        cell.nameLabel.text = cell.nameLabel.text! + (assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).name
@@ -212,6 +210,11 @@ class CustomControllerForLiveClassDetails: UIViewController {
 //        //complete it // cell.assignmentNameLabel.text =
 //        //complete it //    cell.upperImageView.image = UIImage(named:"")
 //        drawFullCircle(end: CGPoint(x: cell.circleLabel.frame.origin.x, y: 20.0), ofColor: DataUtils.colorWithHexString("3bab14"), inView: cell.circleLabel, completionPercentage: Double((assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).assignment_marks)!)
+        
+        
+        
+        
+        
         return cell
         
     }

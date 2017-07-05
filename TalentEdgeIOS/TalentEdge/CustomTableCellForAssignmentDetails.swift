@@ -25,9 +25,11 @@ class CustomTableCellForAssignmentDetails: UITableViewCell {
     @IBOutlet weak var circleLabel: UILabel!
     
     
+    @IBOutlet weak var checkBoxImageView: UIButton!
     @IBOutlet weak var buttomButton: UIButton!
     
     
+    @IBOutlet weak var upperViewForTableCell: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -39,8 +41,12 @@ class CustomTableCellForAssignmentDetails: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
+    
+    
     @IBAction func bottomButtonTapped(_ sender: Any) {
     }
     @IBAction func downloadButtonTapped(_ sender: Any) {
     }
+    
 }

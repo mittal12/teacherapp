@@ -28,17 +28,34 @@
 		C212C3961EE0952900B0B4DB /* TDashboardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C212C3951EE0952900B0B4DB /* TDashboardData.swift */; };
 		C212C3981EE096B100B0B4DB /* TBatchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C212C3971EE096B100B0B4DB /* TBatchInfo.swift */; };
 		C21A57F11EE5B7BE000F15C9 /* LiveClassSubviews.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21A57F01EE5B7BE000F15C9 /* LiveClassSubviews.xib */; };
+		C26C6CAF1EFF8E57001AA6A5 /* TimingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C6CAE1EFF8E57001AA6A5 /* TimingCell.swift */; };
+		C26C6CB11EFF8E79001AA6A5 /* CellForLiveClassesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C6CB01EFF8E79001AA6A5 /* CellForLiveClassesDetail.swift */; };
+		C26C6CB31F002EBA001AA6A5 /* ProfileUserExperienceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C6CB21F002EBA001AA6A5 /* ProfileUserExperienceModel.swift */; };
+		C26C6CB51F002F24001AA6A5 /* ProfileUserEducationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C6CB41F002F23001AA6A5 /* ProfileUserEducationModel.swift */; };
 		C26E1EEE1EE3439100A4A51D /* DetailDashBoardFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E1EED1EE3439100A4A51D /* DetailDashBoardFirstView.swift */; };
 		C28938D71EDC7AD500E9A5C5 /* TDashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28938D61EDC7AD500E9A5C5 /* TDashBoardViewController.swift */; };
 		C28938D91EDC7B3100E9A5C5 /* TMycourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28938D81EDC7B3100E9A5C5 /* TMycourseCell.swift */; };
+		C28DC97E1F05E7AE001BB4A5 /* discussion.png in Resources */ = {isa = PBXBuildFile; fileRef = C28DC97D1F05E7AE001BB4A5 /* discussion.png */; };
 		C28FE7361EEEB85600D26C14 /* LiveClassDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28FE7351EEEB85400D26C14 /* LiveClassDetailsModel.swift */; };
 		C28FE7391EEEB9A500D26C14 /* student_session_info.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28FE7381EEEB9A500D26C14 /* student_session_info.swift */; };
 		C28FE73B1EEEB9D700D26C14 /* time_details.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28FE73A1EEEB9D700D26C14 /* time_details.swift */; };
 		C28FE73D1EEEBA8300D26C14 /* CustomControllerForLiveClassDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28FE73C1EEEBA8300D26C14 /* CustomControllerForLiveClassDetails.swift */; };
 		C290E2291EE434170024DB5F /* ViewForAssignmentModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290E2281EE434170024DB5F /* ViewForAssignmentModule.swift */; };
 		C290E22B1EE4435E0024DB5F /* ViewForAssessmentModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290E22A1EE4435D0024DB5F /* ViewForAssessmentModule.swift */; };
+		C2A056F61EFE2E7E00938367 /* LearnerBasicAssignmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A056F51EFE2E7E00938367 /* LearnerBasicAssignmentModel.swift */; };
+		C2A056F91EFE64A400938367 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A056F81EFE64A400938367 /* ProfileModel.swift */; };
+		C2A056FB1EFE650200938367 /* ProfileBasicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A056FA1EFE650200938367 /* ProfileBasicModel.swift */; };
+		C2A056FD1EFE673800938367 /* ProfileuserExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A056FC1EFE673800938367 /* ProfileuserExperience.swift */; };
+		C2A056FF1EFE67AA00938367 /* ProfileUserEducation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A056FE1EFE67AA00938367 /* ProfileUserEducation.swift */; };
+		C2A057011EFE69FB00938367 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A057001EFE69F900938367 /* UserProfileViewController.swift */; };
+		C2A199241EFF815B007743F3 /* CustomControllerForLiveClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A199231EFF815B007743F3 /* CustomControllerForLiveClasses.swift */; };
 		C2A20BE01EED6AEE00292CA9 /* NotesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A20BDF1EED6AED00292CA9 /* NotesDetailsViewController.swift */; };
 		C2A20BE21EED6C7E00292CA9 /* NotesDetailsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A20BE11EED6C7E00292CA9 /* NotesDetailsTableCell.swift */; };
+		C2A5BB651F03D0BD00D1F7CC /* SummaryUpperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A5BB641F03D0BC00D1F7CC /* SummaryUpperView.xib */; };
+		C2A5E32D1F0493980002448C /* SummaryMiddleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A5E32C1F0493980002448C /* SummaryMiddleView.xib */; };
+		C2A5E32F1F0493C40002448C /* SummaryUpperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A5E32E1F0493C40002448C /* SummaryUpperView.swift */; };
+		C2A5E3311F0493DE0002448C /* SummaryMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A5E3301F0493DE0002448C /* SummaryMiddleView.swift */; };
+		C2A5E3331F04AD2D0002448C /* SendMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A5E3321F04AD2D0002448C /* SendMessageCell.swift */; };
 		C2ABE3C51EDF12FC006C7AB8 /* TMyCourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ABE3C41EDF12FC006C7AB8 /* TMyCourseDetailViewController.swift */; };
 		C2B379DE1EF189C8001EF93A /* AttendanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B379DD1EF189C8001EF93A /* AttendanceModel.swift */; };
 		C2B379E01EF18A95001EF93A /* batchPaticipationDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B379DF1EF18A95001EF93A /* batchPaticipationDetailsModel.swift */; };
@@ -51,6 +68,34 @@
 		C2B67ACF1EF051C000D46523 /* TAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B67ACE1EF051C000D46523 /* TAssignmentViewController.swift */; };
 		C2B67AD11EF051DF00D46523 /* TAssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B67AD01EF051DF00D46523 /* TAssessmentViewController.swift */; };
 		C2B67AD31EF0574000D46523 /* TLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B67AD21EF0574000D46523 /* TLiveData.swift */; };
+		C2B8DA201F07A16F00988F0C /* students_attempted.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA1F1F07A16F00988F0C /* students_attempted.png */; };
+		C2B8DA221F07A17A00988F0C /* student_unattempted.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA211F07A17A00988F0C /* student_unattempted.png */; };
+		C2B8DA241F07A18B00988F0C /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA231F07A18B00988F0C /* note.png */; };
+		C2B8DA261F07A19500988F0C /* note_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA251F07A19500988F0C /* note_icon.png */; };
+		C2B8DA2A1F07A1C600988F0C /* negative_marks.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA271F07A1C600988F0C /* negative_marks.png */; };
+		C2B8DA2B1F07A1C600988F0C /* module_planner.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA281F07A1C600988F0C /* module_planner.png */; };
+		C2B8DA2C1F07A1C600988F0C /* marks_obtained.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA291F07A1C600988F0C /* marks_obtained.png */; };
+		C2B8DA321F07A1DF00988F0C /* m_time.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA2D1F07A1DF00988F0C /* m_time.png */; };
+		C2B8DA331F07A1DF00988F0C /* m_questions.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA2E1F07A1DF00988F0C /* m_questions.png */; };
+		C2B8DA341F07A1DF00988F0C /* m_instruction.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA2F1F07A1DF00988F0C /* m_instruction.png */; };
+		C2B8DA351F07A1DF00988F0C /* live_seesion_rednew.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA301F07A1DF00988F0C /* live_seesion_rednew.png */; };
+		C2B8DA361F07A1DF00988F0C /* live_recorded_sessionnew.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA311F07A1DF00988F0C /* live_recorded_sessionnew.png */; };
+		C2B8DA381F07A1FE00988F0C /* ic_note_book.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA371F07A1FE00988F0C /* ic_note_book.png */; };
+		C2B8DA3D1F07A20900988F0C /* file_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA391F07A20900988F0C /* file_icon.png */; };
+		C2B8DA3E1F07A20900988F0C /* download_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA3A1F07A20900988F0C /* download_icon2.png */; };
+		C2B8DA3F1F07A20900988F0C /* assignment_uploaded.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA3B1F07A20900988F0C /* assignment_uploaded.png */; };
+		C2B8DA401F07A20900988F0C /* assignment_teacher.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA3C1F07A20900988F0C /* assignment_teacher.png */; };
+		C2B8DA421F07A22000988F0C /* assignment_not_uploaded.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA411F07A22000988F0C /* assignment_not_uploaded.png */; };
+		C2B8DA441F07A22F00988F0C /* assessmentnew.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA431F07A22F00988F0C /* assessmentnew.png */; };
+		C2B8DA461F07A23800988F0C /* ans_wrong.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA451F07A23800988F0C /* ans_wrong.png */; };
+		C2B8DA481F07A24400988F0C /* ans_que.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA471F07A24400988F0C /* ans_que.png */; };
+		C2B8DA4A1F07A25000988F0C /* ans_correct.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA491F07A25000988F0C /* ans_correct.png */; };
+		C2B8DA4C1F07A33800988F0C /* assignmentnew.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA4B1F07A33800988F0C /* assignmentnew.png */; };
+		C2B8DA4E1F07A5E700988F0C /* message_big.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA4D1F07A5E700988F0C /* message_big.png */; };
+		C2B8DA501F07A5FE00988F0C /* students_big1.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA4F1F07A5FE00988F0C /* students_big1.png */; };
+		C2B8DA521F07B48600988F0C /* uncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA511F07B48600988F0C /* uncheck.png */; };
+		C2B8DA541F07B4BB00988F0C /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B8DA531F07B4BB00988F0C /* checkbox.png */; };
+		C2CBBE8E1F06B53B00077153 /* video_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CBBE8D1F06B53B00077153 /* video_icon.png */; };
 		C2DE68281EE1CDB700DF0236 /* Batch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE68271EE1CDB700DF0236 /* Batch.swift */; };
 		C2DE682A1EE1CECD00DF0236 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE68291EE1CECD00DF0236 /* Course.swift */; };
 		C2DE682C1EE1CF1900DF0236 /* Institute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE682B1EE1CF1900DF0236 /* Institute.swift */; };
@@ -61,12 +106,11 @@
 		C2DE68361EE1D24E00DF0236 /* NotesAndVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE68351EE1D24E00DF0236 /* NotesAndVideo.swift */; };
 		C2DE68391EE1E43700DF0236 /* DetailDashBoardFirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2DE68381EE1E43600DF0236 /* DetailDashBoardFirstView.xib */; };
 		C2F1EB221EF81F6A00CAAF85 /* live_class.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F1EB211EF81F6A00CAAF85 /* live_class.png */; };
-		C2F1EB261EF81F9E00CAAF85 /* assessmentnew.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F1EB231EF81F9E00CAAF85 /* assessmentnew.png */; };
-		C2F1EB271EF81F9E00CAAF85 /* assignmentnew.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F1EB241EF81F9E00CAAF85 /* assignmentnew.png */; };
-		C2F1EB281EF81F9E00CAAF85 /* disscusstion.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F1EB251EF81F9E00CAAF85 /* disscusstion.png */; };
-		C2F1EB2B1EF8205D00CAAF85 /* message_big.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F1EB291EF8205D00CAAF85 /* message_big.png */; };
-		C2F1EB2C1EF8205D00CAAF85 /* students_big.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F1EB2A1EF8205D00CAAF85 /* students_big.png */; };
-		C2F1EB2E1EF8222100CAAF85 /* students_big1.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F1EB2D1EF8222100CAAF85 /* students_big1.png */; };
+		C2FA4C601EFDA4B9004C254E /* LearnerVireController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA4C5F1EFDA4B9004C254E /* LearnerVireController.swift */; };
+		C2FA4C621EFDAC30004C254E /* LeanerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA4C611EFDAC30004C254E /* LeanerTableCell.swift */; };
+		C2FA4C641EFDB22F004C254E /* LearnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA4C631EFDB22F004C254E /* LearnerModel.swift */; };
+		C2FA4C661EFDB62D004C254E /* LearnerBasicInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA4C651EFDB62D004C254E /* LearnerBasicInfoModel.swift */; };
+		C2FA4C681EFDB7DB004C254E /* LearnerBasicassessmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA4C671EFDB7DB004C254E /* LearnerBasicassessmentModel.swift */; };
 		C6D6D25388D46CCFF590209A /* Pods_TalentEdgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C42C4A84784AA256A08E5A /* Pods_TalentEdgeTests.framework */; };
 		C708AB3B1E5B096C00347769 /* TestimonialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C708AB3A1E5B096C00347769 /* TestimonialViewController.swift */; };
 		C708AB3D1E5B0CA300347769 /* MyCourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C708AB3C1E5B0CA300347769 /* MyCourseDetailViewController.swift */; };
@@ -419,17 +463,34 @@
 		C212C3951EE0952900B0B4DB /* TDashboardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDashboardData.swift; sourceTree = "<group>"; };
 		C212C3971EE096B100B0B4DB /* TBatchInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBatchInfo.swift; sourceTree = "<group>"; };
 		C21A57F01EE5B7BE000F15C9 /* LiveClassSubviews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveClassSubviews.xib; sourceTree = "<group>"; };
+		C26C6CAE1EFF8E57001AA6A5 /* TimingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingCell.swift; sourceTree = "<group>"; };
+		C26C6CB01EFF8E79001AA6A5 /* CellForLiveClassesDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellForLiveClassesDetail.swift; sourceTree = "<group>"; };
+		C26C6CB21F002EBA001AA6A5 /* ProfileUserExperienceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserExperienceModel.swift; sourceTree = "<group>"; };
+		C26C6CB41F002F23001AA6A5 /* ProfileUserEducationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserEducationModel.swift; sourceTree = "<group>"; };
 		C26E1EED1EE3439100A4A51D /* DetailDashBoardFirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDashBoardFirstView.swift; sourceTree = "<group>"; };
 		C28938D61EDC7AD500E9A5C5 /* TDashBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDashBoardViewController.swift; sourceTree = "<group>"; };
 		C28938D81EDC7B3100E9A5C5 /* TMycourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMycourseCell.swift; sourceTree = "<group>"; };
+		C28DC97D1F05E7AE001BB4A5 /* discussion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discussion.png; sourceTree = "<group>"; };
 		C28FE7351EEEB85400D26C14 /* LiveClassDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveClassDetailsModel.swift; sourceTree = "<group>"; };
 		C28FE7381EEEB9A500D26C14 /* student_session_info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = student_session_info.swift; sourceTree = "<group>"; };
 		C28FE73A1EEEB9D700D26C14 /* time_details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = time_details.swift; sourceTree = "<group>"; };
 		C28FE73C1EEEBA8300D26C14 /* CustomControllerForLiveClassDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomControllerForLiveClassDetails.swift; sourceTree = "<group>"; };
 		C290E2281EE434170024DB5F /* ViewForAssignmentModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewForAssignmentModule.swift; sourceTree = "<group>"; };
 		C290E22A1EE4435D0024DB5F /* ViewForAssessmentModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewForAssessmentModule.swift; sourceTree = "<group>"; };
+		C2A056F51EFE2E7E00938367 /* LearnerBasicAssignmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnerBasicAssignmentModel.swift; sourceTree = "<group>"; };
+		C2A056F81EFE64A400938367 /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		C2A056FA1EFE650200938367 /* ProfileBasicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBasicModel.swift; sourceTree = "<group>"; };
+		C2A056FC1EFE673800938367 /* ProfileuserExperience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileuserExperience.swift; sourceTree = "<group>"; };
+		C2A056FE1EFE67AA00938367 /* ProfileUserEducation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserEducation.swift; sourceTree = "<group>"; };
+		C2A057001EFE69F900938367 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		C2A199231EFF815B007743F3 /* CustomControllerForLiveClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomControllerForLiveClasses.swift; sourceTree = "<group>"; };
 		C2A20BDF1EED6AED00292CA9 /* NotesDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesDetailsViewController.swift; sourceTree = "<group>"; };
 		C2A20BE11EED6C7E00292CA9 /* NotesDetailsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesDetailsTableCell.swift; sourceTree = "<group>"; };
+		C2A5BB641F03D0BC00D1F7CC /* SummaryUpperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryUpperView.xib; sourceTree = "<group>"; };
+		C2A5E32C1F0493980002448C /* SummaryMiddleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryMiddleView.xib; sourceTree = "<group>"; };
+		C2A5E32E1F0493C40002448C /* SummaryUpperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryUpperView.swift; sourceTree = "<group>"; };
+		C2A5E3301F0493DE0002448C /* SummaryMiddleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryMiddleView.swift; sourceTree = "<group>"; };
+		C2A5E3321F04AD2D0002448C /* SendMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageCell.swift; sourceTree = "<group>"; };
 		C2ABE3C41EDF12FC006C7AB8 /* TMyCourseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMyCourseDetailViewController.swift; sourceTree = "<group>"; };
 		C2B379DD1EF189C8001EF93A /* AttendanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceModel.swift; sourceTree = "<group>"; };
 		C2B379DF1EF18A95001EF93A /* batchPaticipationDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = batchPaticipationDetailsModel.swift; sourceTree = "<group>"; };
@@ -442,6 +503,34 @@
 		C2B67ACE1EF051C000D46523 /* TAssignmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAssignmentViewController.swift; sourceTree = "<group>"; };
 		C2B67AD01EF051DF00D46523 /* TAssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAssessmentViewController.swift; sourceTree = "<group>"; };
 		C2B67AD21EF0574000D46523 /* TLiveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLiveData.swift; sourceTree = "<group>"; };
+		C2B8DA1F1F07A16F00988F0C /* students_attempted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = students_attempted.png; sourceTree = "<group>"; };
+		C2B8DA211F07A17A00988F0C /* student_unattempted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student_unattempted.png; sourceTree = "<group>"; };
+		C2B8DA231F07A18B00988F0C /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
+		C2B8DA251F07A19500988F0C /* note_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note_icon.png; sourceTree = "<group>"; };
+		C2B8DA271F07A1C600988F0C /* negative_marks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = negative_marks.png; sourceTree = "<group>"; };
+		C2B8DA281F07A1C600988F0C /* module_planner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = module_planner.png; sourceTree = "<group>"; };
+		C2B8DA291F07A1C600988F0C /* marks_obtained.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marks_obtained.png; sourceTree = "<group>"; };
+		C2B8DA2D1F07A1DF00988F0C /* m_time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m_time.png; sourceTree = "<group>"; };
+		C2B8DA2E1F07A1DF00988F0C /* m_questions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m_questions.png; sourceTree = "<group>"; };
+		C2B8DA2F1F07A1DF00988F0C /* m_instruction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m_instruction.png; sourceTree = "<group>"; };
+		C2B8DA301F07A1DF00988F0C /* live_seesion_rednew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = live_seesion_rednew.png; sourceTree = "<group>"; };
+		C2B8DA311F07A1DF00988F0C /* live_recorded_sessionnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = live_recorded_sessionnew.png; sourceTree = "<group>"; };
+		C2B8DA371F07A1FE00988F0C /* ic_note_book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_note_book.png; sourceTree = "<group>"; };
+		C2B8DA391F07A20900988F0C /* file_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file_icon.png; sourceTree = "<group>"; };
+		C2B8DA3A1F07A20900988F0C /* download_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download_icon2.png; sourceTree = "<group>"; };
+		C2B8DA3B1F07A20900988F0C /* assignment_uploaded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = assignment_uploaded.png; sourceTree = "<group>"; };
+		C2B8DA3C1F07A20900988F0C /* assignment_teacher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = assignment_teacher.png; sourceTree = "<group>"; };
+		C2B8DA411F07A22000988F0C /* assignment_not_uploaded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = assignment_not_uploaded.png; sourceTree = "<group>"; };
+		C2B8DA431F07A22F00988F0C /* assessmentnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = assessmentnew.png; sourceTree = "<group>"; };
+		C2B8DA451F07A23800988F0C /* ans_wrong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ans_wrong.png; sourceTree = "<group>"; };
+		C2B8DA471F07A24400988F0C /* ans_que.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ans_que.png; sourceTree = "<group>"; };
+		C2B8DA491F07A25000988F0C /* ans_correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ans_correct.png; sourceTree = "<group>"; };
+		C2B8DA4B1F07A33800988F0C /* assignmentnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = assignmentnew.png; sourceTree = "<group>"; };
+		C2B8DA4D1F07A5E700988F0C /* message_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_big.png; sourceTree = "<group>"; };
+		C2B8DA4F1F07A5FE00988F0C /* students_big1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = students_big1.png; sourceTree = "<group>"; };
+		C2B8DA511F07B48600988F0C /* uncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uncheck.png; sourceTree = "<group>"; };
+		C2B8DA531F07B4BB00988F0C /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox.png; sourceTree = "<group>"; };
+		C2CBBE8D1F06B53B00077153 /* video_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = video_icon.png; path = ../../../ashish/video_icon.png; sourceTree = "<group>"; };
 		C2DE68271EE1CDB700DF0236 /* Batch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Batch.swift; sourceTree = "<group>"; };
 		C2DE68291EE1CECD00DF0236 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		C2DE682B1EE1CF1900DF0236 /* Institute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Institute.swift; sourceTree = "<group>"; };
@@ -452,12 +541,11 @@
 		C2DE68351EE1D24E00DF0236 /* NotesAndVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesAndVideo.swift; sourceTree = "<group>"; };
 		C2DE68381EE1E43600DF0236 /* DetailDashBoardFirstView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailDashBoardFirstView.xib; sourceTree = "<group>"; };
 		C2F1EB211EF81F6A00CAAF85 /* live_class.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = live_class.png; sourceTree = "<group>"; };
-		C2F1EB231EF81F9E00CAAF85 /* assessmentnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = assessmentnew.png; sourceTree = "<group>"; };
-		C2F1EB241EF81F9E00CAAF85 /* assignmentnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = assignmentnew.png; sourceTree = "<group>"; };
-		C2F1EB251EF81F9E00CAAF85 /* disscusstion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disscusstion.png; sourceTree = "<group>"; };
-		C2F1EB291EF8205D00CAAF85 /* message_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_big.png; sourceTree = "<group>"; };
-		C2F1EB2A1EF8205D00CAAF85 /* students_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = students_big.png; sourceTree = "<group>"; };
-		C2F1EB2D1EF8222100CAAF85 /* students_big1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = students_big1.png; sourceTree = "<group>"; };
+		C2FA4C5F1EFDA4B9004C254E /* LearnerVireController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnerVireController.swift; sourceTree = "<group>"; };
+		C2FA4C611EFDAC30004C254E /* LeanerTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeanerTableCell.swift; sourceTree = "<group>"; };
+		C2FA4C631EFDB22F004C254E /* LearnerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnerModel.swift; sourceTree = "<group>"; };
+		C2FA4C651EFDB62D004C254E /* LearnerBasicInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnerBasicInfoModel.swift; sourceTree = "<group>"; };
+		C2FA4C671EFDB7DB004C254E /* LearnerBasicassessmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnerBasicassessmentModel.swift; sourceTree = "<group>"; };
 		C6A84BB339E91495E232C6DF /* Pods-TalentEdgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalentEdgeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TalentEdgeTests/Pods-TalentEdgeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C708AB3A1E5B096C00347769 /* TestimonialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestimonialViewController.swift; path = Controller/MyCourseViewController/TestimonialViewController.swift; sourceTree = "<group>"; };
 		C708AB3C1E5B0CA300347769 /* MyCourseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCourseDetailViewController.swift; path = Controller/MyCourseViewController/MyCourseDetailViewController.swift; sourceTree = "<group>"; };
@@ -868,6 +956,9 @@
 		C28938D51EDC7AC600E9A5C5 /* teacher */ = {
 			isa = PBXGroup;
 			children = (
+				C2A199221EFF8107007743F3 /* live Detail Section */,
+				C2A056F71EFE647A00938367 /* profile section */,
+				C2FA4C5E1EFDA385004C254E /* learner section */,
 				C2B67ACB1EF0515300D46523 /* simpleViewController */,
 				C2DE68371EE1E39900DF0236 /* xib files */,
 				C2DE68261EE1CD8D00DF0236 /* model */,
@@ -905,6 +996,36 @@
 				C28FE73A1EEEB9D700D26C14 /* time_details.swift */,
 			);
 			name = "LiveclassDetailModel ";
+			sourceTree = "<group>";
+		};
+		C2A056F71EFE647A00938367 /* profile section */ = {
+			isa = PBXGroup;
+			children = (
+				C2A056F81EFE64A400938367 /* ProfileModel.swift */,
+				C2A056FA1EFE650200938367 /* ProfileBasicModel.swift */,
+				C2A056FC1EFE673800938367 /* ProfileuserExperience.swift */,
+				C2A056FE1EFE67AA00938367 /* ProfileUserEducation.swift */,
+				C2A057001EFE69F900938367 /* UserProfileViewController.swift */,
+				C26C6CB21F002EBA001AA6A5 /* ProfileUserExperienceModel.swift */,
+				C26C6CB41F002F23001AA6A5 /* ProfileUserEducationModel.swift */,
+				C2A5BB641F03D0BC00D1F7CC /* SummaryUpperView.xib */,
+				C2A5E32C1F0493980002448C /* SummaryMiddleView.xib */,
+				C2A5E32E1F0493C40002448C /* SummaryUpperView.swift */,
+				C2A5E3301F0493DE0002448C /* SummaryMiddleView.swift */,
+			);
+			name = "profile section";
+			sourceTree = "<group>";
+		};
+		C2A199221EFF8107007743F3 /* live Detail Section */ = {
+			isa = PBXGroup;
+			children = (
+				C2A199231EFF815B007743F3 /* CustomControllerForLiveClasses.swift */,
+				C26C6CAE1EFF8E57001AA6A5 /* TimingCell.swift */,
+				C26C6CB01EFF8E79001AA6A5 /* CellForLiveClassesDetail.swift */,
+				C2A5E3321F04AD2D0002448C /* SendMessageCell.swift */,
+				C28FE7371EEEB86100D26C14 /* LiveclassDetailModel  */,
+			);
+			name = "live Detail Section";
 			sourceTree = "<group>";
 		};
 		C2B379DC1EF189AD001EF93A /* attendanceModel */ = {
@@ -950,7 +1071,6 @@
 				C2B379E61EF1AE01001EF93A /* assessmentModel */,
 				C2B379E31EF1A447001EF93A /* assignmentModel */,
 				C2B379DC1EF189AD001EF93A /* attendanceModel */,
-				C28FE7371EEEB86100D26C14 /* LiveclassDetailModel  */,
 				C20744681EEDE222004BC415 /* assessmentdetail */,
 				C20744631EEDD261004BC415 /* assignmentdetail */,
 				C20744571EED753C004BC415 /* Notesdetails */,
@@ -978,15 +1098,51 @@
 		C2F1EB201EF81F5E00CAAF85 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				C2F1EB2D1EF8222100CAAF85 /* students_big1.png */,
-				C2F1EB291EF8205D00CAAF85 /* message_big.png */,
-				C2F1EB2A1EF8205D00CAAF85 /* students_big.png */,
-				C2F1EB231EF81F9E00CAAF85 /* assessmentnew.png */,
-				C2F1EB241EF81F9E00CAAF85 /* assignmentnew.png */,
-				C2F1EB251EF81F9E00CAAF85 /* disscusstion.png */,
+				C28DC97D1F05E7AE001BB4A5 /* discussion.png */,
+				C2B8DA1F1F07A16F00988F0C /* students_attempted.png */,
+				C2B8DA211F07A17A00988F0C /* student_unattempted.png */,
+				C2B8DA511F07B48600988F0C /* uncheck.png */,
+				C2B8DA531F07B4BB00988F0C /* checkbox.png */,
+				C2B8DA4B1F07A33800988F0C /* assignmentnew.png */,
+				C2B8DA4F1F07A5FE00988F0C /* students_big1.png */,
+				C2B8DA4D1F07A5E700988F0C /* message_big.png */,
+				C2B8DA2D1F07A1DF00988F0C /* m_time.png */,
+				C2B8DA2E1F07A1DF00988F0C /* m_questions.png */,
+				C2B8DA2F1F07A1DF00988F0C /* m_instruction.png */,
+				C2B8DA371F07A1FE00988F0C /* ic_note_book.png */,
+				C2B8DA301F07A1DF00988F0C /* live_seesion_rednew.png */,
+				C2B8DA311F07A1DF00988F0C /* live_recorded_sessionnew.png */,
+				C2B8DA451F07A23800988F0C /* ans_wrong.png */,
+				C2B8DA431F07A22F00988F0C /* assessmentnew.png */,
 				C2F1EB211EF81F6A00CAAF85 /* live_class.png */,
+				C2B8DA391F07A20900988F0C /* file_icon.png */,
+				C2B8DA3A1F07A20900988F0C /* download_icon2.png */,
+				C2B8DA471F07A24400988F0C /* ans_que.png */,
+				C2B8DA3B1F07A20900988F0C /* assignment_uploaded.png */,
+				C2B8DA411F07A22000988F0C /* assignment_not_uploaded.png */,
+				C2B8DA3C1F07A20900988F0C /* assignment_teacher.png */,
+				C2B8DA271F07A1C600988F0C /* negative_marks.png */,
+				C2B8DA281F07A1C600988F0C /* module_planner.png */,
+				C2B8DA291F07A1C600988F0C /* marks_obtained.png */,
+				C2B8DA491F07A25000988F0C /* ans_correct.png */,
+				C2B8DA251F07A19500988F0C /* note_icon.png */,
+				C2CBBE8D1F06B53B00077153 /* video_icon.png */,
+				C2B8DA231F07A18B00988F0C /* note.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		C2FA4C5E1EFDA385004C254E /* learner section */ = {
+			isa = PBXGroup;
+			children = (
+				C2FA4C5F1EFDA4B9004C254E /* LearnerVireController.swift */,
+				C2FA4C611EFDAC30004C254E /* LeanerTableCell.swift */,
+				C2FA4C631EFDB22F004C254E /* LearnerModel.swift */,
+				C2FA4C651EFDB62D004C254E /* LearnerBasicInfoModel.swift */,
+				C2FA4C671EFDB7DB004C254E /* LearnerBasicassessmentModel.swift */,
+				C2A056F51EFE2E7E00938367 /* LearnerBasicAssignmentModel.swift */,
+			);
+			name = "learner section";
 			sourceTree = "<group>";
 		};
 		C708AB3E1E5B14A200347769 /* Frameworks */ = {
@@ -1837,7 +1993,7 @@
 				TargetAttributes = {
 					C7177CC81E55AD8E0048BEF8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = YVKQ6MEP86;
+						DevelopmentTeam = MW346528RT;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -1848,6 +2004,7 @@
 					};
 					C7177CDC1E55AD920048BEF8 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MW346528RT;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C7177CC81E55AD8E0048BEF8;
 					};
@@ -1877,21 +2034,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2F1EB271EF81F9E00CAAF85 /* assignmentnew.png in Resources */,
 				E684ADBF1E83029A00845F28 /* ic_arrow_downward_grey@3x.PNG in Resources */,
 				C70D524A1E65328500D05060 /* Assignment@3x.PNG in Resources */,
 				E684ADC51E83029A00845F28 /* ic_insert_comment_black@3x.png in Resources */,
 				E6E9FEB01EA7C8CF005328ED /* unlock_icon@1x.png in Resources */,
+				C2A5BB651F03D0BD00D1F7CC /* SummaryUpperView.xib in Resources */,
 				E684ADA71E83029A00845F28 /* eye_active@3x.PNG in Resources */,
 				E684AD571E82D23F00845F28 /* default_user@2x.PNG in Resources */,
 				E684ADB81E83029A00845F28 /* ic_add_alert_blue@2x.png in Resources */,
 				E684AD501E82D23F00845F28 /* assessment1@3x.png in Resources */,
 				E684ADAF1E83029A00845F28 /* eye_open@2x.PNG in Resources */,
+				C2B8DA351F07A1DF00988F0C /* live_seesion_rednew.png in Resources */,
 				C7177CD71E55AD910048BEF8 /* LaunchScreen.storyboard in Resources */,
 				E684AD591E82D23F00845F28 /* default_user1@1x.PNG in Resources */,
 				E684AD521E82D23F00845F28 /* Assignment1@2x.png in Resources */,
 				E684ADBA1E83029A00845F28 /* ic_alarm_on_black@1x.PNG in Resources */,
 				E6E9FEBC1EA7E5F2005328ED /* ic_message_grey_500_24dp.png in Resources */,
+				C2B8DA2B1F07A1C600988F0C /* module_planner.png in Resources */,
 				E684ADD31E83029A00845F28 /* ic_star_blue@2x.PNG in Resources */,
 				E684AD611E82D23F00845F28 /* edit_profile@2x.PNG in Resources */,
 				E684AD581E82D23F00845F28 /* default_user@3x.PNG in Resources */,
@@ -1905,6 +2064,7 @@
 				E684ADB41E83029A00845F28 /* ic_access_time_black@1x.png in Resources */,
 				E684ADE41E83029A00845F28 /* live_class1@1x.PNG in Resources */,
 				C70D52521E65328500D05060 /* Disscussion@2x.PNG in Resources */,
+				C28DC97E1F05E7AE001BB4A5 /* discussion.png in Resources */,
 				C71941951E950E0800464621 /* 1@3x.png in Resources */,
 				C70D525F1E65328500D05060 /* Notification@3x.PNG in Resources */,
 				E6E9FEAE1EA7C8CF005328ED /* tick@1x.png in Resources */,
@@ -1923,7 +2083,6 @@
 				E684ADA91E83029A00845F28 /* eye_continue@2x.PNG in Resources */,
 				E61ED1841E8D87EE001BC8CF /* testimonail_add@3x.png in Resources */,
 				E684ADAD1E83029A00845F28 /* eye_inactive@3x.png in Resources */,
-				C2F1EB2C1EF8205D00CAAF85 /* students_big.png in Resources */,
 				E684ADD01E83029A00845F28 /* ic_more_vert_grey@2x.PNG in Resources */,
 				E684ADAE1E83029A00845F28 /* eye_open@1x.PNG in Resources */,
 				E6E9FEAD1EA7C8CF005328ED /* share_blue.png in Resources */,
@@ -1933,20 +2092,22 @@
 				E684ADB71E83029A00845F28 /* ic_add_alert_blue@1x.png in Resources */,
 				E684ADC21E83029A00845F28 /* ic_flag_red@3x.PNG in Resources */,
 				C70D525A1E65328500D05060 /* Message@1x.PNG in Resources */,
+				C2B8DA331F07A1DF00988F0C /* m_questions.png in Resources */,
 				E684ADC91E83029A00845F28 /* ic_keyboard_arrow_right_grey@1x.PNG in Resources */,
 				C7177CF31E55AEFA0048BEF8 /* manager.geojson in Resources */,
 				E684ADCB1E83029A00845F28 /* ic_keyboard_arrow_right_grey@3x.PNG in Resources */,
-				C2F1EB2B1EF8205D00CAAF85 /* message_big.png in Resources */,
 				E684ADD11E83029A00845F28 /* ic_more_vert_grey@3x.PNG in Resources */,
+				C2B8DA3D1F07A20900988F0C /* file_icon.png in Resources */,
 				C70D524C1E65328500D05060 /* Course@2x.PNG in Resources */,
 				C70D52571E65328500D05060 /* Logout@1x.PNG in Resources */,
 				E684ADDC1E83029A00845F28 /* ic_warning_red@2x.png in Resources */,
 				C70D52541E65328500D05060 /* Live class@1x.PNG in Resources */,
-				C2F1EB2E1EF8222100CAAF85 /* students_big1.png in Resources */,
 				C70D524F1E65328500D05060 /* Dashboard@2x.PNG in Resources */,
+				C2A5E32D1F0493980002448C /* SummaryMiddleView.xib in Resources */,
 				E684ADB91E83029A00845F28 /* ic_add_alert_blue@3x.png in Resources */,
 				E6E9FEAB1EA7C8CF005328ED /* lock_icon@3x.png in Resources */,
 				C2F1EB221EF81F6A00CAAF85 /* live_class.png in Resources */,
+				C2B8DA341F07A1DF00988F0C /* m_instruction.png in Resources */,
 				E684AD5C1E82D23F00845F28 /* disscusstion@3x.PNG in Resources */,
 				E684ADD61E83029A00845F28 /* ic_star_fill@2x.PNG in Resources */,
 				C70D52461E65328500D05060 /* Assessment@2x.PNG in Resources */,
@@ -1955,10 +2116,14 @@
 				E6E9FEAA1EA7C8CF005328ED /* lock_icon@2x.png in Resources */,
 				E6A6ABB01EA9328B00CD5848 /* plus.png in Resources */,
 				E64066791EC709B800541DA9 /* eye_continue@1x.PNG in Resources */,
+				C2B8DA321F07A1DF00988F0C /* m_time.png in Resources */,
+				C2B8DA4E1F07A5E700988F0C /* message_big.png in Resources */,
 				E684ADCD1E83029A00845F28 /* ic_more_horiz_red@2x.png in Resources */,
 				C70D52531E65328500D05060 /* Disscussion@3x.PNG in Resources */,
 				E684ADC61E83029A00845F28 /* ic_keyboard_arrow_left_grey@1x.PNG in Resources */,
 				E684AD511E82D23F00845F28 /* Assignment1@1x.png in Resources */,
+				C2B8DA241F07A18B00988F0C /* note.png in Resources */,
+				C2B8DA3F1F07A20900988F0C /* assignment_uploaded.png in Resources */,
 				E684ADAB1E83029A00845F28 /* eye_inactive@1x.png in Resources */,
 				E684ADAA1E83029A00845F28 /* eye_continue@3x.PNG in Resources */,
 				E684ADAC1E83029A00845F28 /* eye_inactive@2x.png in Resources */,
@@ -1966,18 +2131,24 @@
 				E684AD5E1E82D23F00845F28 /* download_icon@2x.png in Resources */,
 				C70D52551E65328500D05060 /* Live class@2x.PNG in Resources */,
 				E684ADE31E83029A00845F28 /* like_icon@3x.PNG in Resources */,
+				C2B8DA221F07A17A00988F0C /* student_unattempted.png in Resources */,
 				E6E9FEB81EA7E156005328ED /* ic_mode_edit_grey_600_18dp@1x.png in Resources */,
 				E684ADCF1E83029A00845F28 /* ic_more_vert_grey@1x.PNG in Resources */,
 				E61ED1821E8D87EE001BC8CF /* testimonail_add@1x.png in Resources */,
+				C2B8DA2A1F07A1C600988F0C /* negative_marks.png in Resources */,
 				E684ADD41E83029A00845F28 /* ic_star_blue@3x.PNG in Resources */,
 				E684ADB01E83029A00845F28 /* eye_open@3x.PNG in Resources */,
+				C2B8DA521F07B48600988F0C /* uncheck.png in Resources */,
 				E684ADD91E83029A00845F28 /* ic_thumb_up_blue@2x.PNG in Resources */,
 				C719419A1E950E0800464621 /* 3@2x.png in Resources */,
 				E6E9FEB21EA7C8CF005328ED /* unlock_icon@3x.png in Resources */,
 				E6E9FEBA1EA7E156005328ED /* ic_mode_edit_grey_600_18dp@3x.png in Resources */,
 				C71941931E950E0800464621 /* 1@1x.png in Resources */,
 				E684ADD81E83029A00845F28 /* ic_thumb_up_blue@1x.PNG in Resources */,
+				C2B8DA361F07A1DF00988F0C /* live_recorded_sessionnew.png in Resources */,
+				C2CBBE8E1F06B53B00077153 /* video_icon.png in Resources */,
 				E684AD601E82D23F00845F28 /* edit_profile@1x.PNG in Resources */,
+				C2B8DA381F07A1FE00988F0C /* ic_note_book.png in Resources */,
 				E684ADA61E83029A00845F28 /* eye_active@2x.PNG in Resources */,
 				E684ADBE1E83029A00845F28 /* ic_arrow_downward_grey@2x.PNG in Resources */,
 				E684ADD51E83029A00845F28 /* ic_star_fill@1x.PNG in Resources */,
@@ -1991,28 +2162,35 @@
 				E6A94D941EAD4F1200A9E834 /* 2016-12-13-1913202016-11-19-120009Project_management-0.png in Resources */,
 				E684AD561E82D23F00845F28 /* back_arrow_white@3x.png in Resources */,
 				C70D52491E65328500D05060 /* Assignment@2x.PNG in Resources */,
+				C2B8DA541F07B4BB00988F0C /* checkbox.png in Resources */,
 				C71941961E950E0800464621 /* 2@1x.png in Resources */,
+				C2B8DA501F07A5FE00988F0C /* students_big1.png in Resources */,
+				C2B8DA421F07A22000988F0C /* assignment_not_uploaded.png in Resources */,
 				C70D525E1E65328500D05060 /* Notification@2x.PNG in Resources */,
 				E6E9FEAC1EA7C8CF005328ED /* refer_n_earn.png in Resources */,
+				C2B8DA481F07A24400988F0C /* ans_que.png in Resources */,
 				C7177CD41E55AD910048BEF8 /* Assets.xcassets in Resources */,
 				E684ADC31E83029A00845F28 /* ic_insert_comment_black@1x.png in Resources */,
-				C2F1EB261EF81F9E00CAAF85 /* assessmentnew.png in Resources */,
 				C72042E91E89182E00AC2131 /* DKImagePickerController.bundle in Resources */,
 				E684ADB31E83029A00845F28 /* file_icon@3x.PNG in Resources */,
 				C70D525C1E65328500D05060 /* Message@3x.PNG in Resources */,
+				C2B8DA201F07A16F00988F0C /* students_attempted.png in Resources */,
 				E684AD621E82D23F00845F28 /* edit_profile@3x.PNG in Resources */,
 				C719419D1E950EFC00464621 /* TalentEdge-Logo-white.png in Resources */,
 				E684ADCE1E83029A00845F28 /* ic_more_horiz_red@3x.png in Resources */,
 				C70D524B1E65328500D05060 /* Course@1x.PNG in Resources */,
 				C77C05651E6D5B04004DAC80 /* SelectContactTableViewCell.xib in Resources */,
 				E684AD4E1E82D23F00845F28 /* assessment1@1x.png in Resources */,
+				C2B8DA401F07A20900988F0C /* assignment_teacher.png in Resources */,
 				E684ADB51E83029A00845F28 /* ic_access_time_black@2x.png in Resources */,
 				C71941981E950E0800464621 /* 2@3x.png in Resources */,
 				C7177CD21E55AD900048BEF8 /* Main.storyboard in Resources */,
+				C2B8DA3E1F07A20900988F0C /* download_icon2.png in Resources */,
 				C71941941E950E0800464621 /* 1@2x.png in Resources */,
 				E684AD541E82D23F00845F28 /* back_arrow_white@1x.png in Resources */,
 				E684ADBC1E83029A00845F28 /* ic_alarm_on_black@3x.PNG in Resources */,
 				E684ADC41E83029A00845F28 /* ic_insert_comment_black@2x.png in Resources */,
+				C2B8DA2C1F07A1C600988F0C /* marks_obtained.png in Resources */,
 				E684ADCA1E83029A00845F28 /* ic_keyboard_arrow_right_grey@2x.PNG in Resources */,
 				E684ADCC1E83029A00845F28 /* ic_more_horiz_red@1x.png in Resources */,
 				E684ADB61E83029A00845F28 /* ic_access_time_black@3x.png in Resources */,
@@ -2020,29 +2198,33 @@
 				E684ADBB1E83029A00845F28 /* ic_alarm_on_black@2x.PNG in Resources */,
 				E6A6ABAF1EA9328B00CD5848 /* minus_icon.png in Resources */,
 				C7177D211E55B3250048BEF8 /* FontAwesome.ttf in Resources */,
+				C2B8DA4C1F07A33800988F0C /* assignmentnew.png in Resources */,
 				E684ADB21E83029A00845F28 /* file_icon@2x.PNG in Resources */,
 				C7C4CBD01E6FFA5C00A91CFA /* ModuleHeader.xib in Resources */,
 				E684ADDE1E83029A00845F28 /* info@1x.PNG in Resources */,
 				E684ADDF1E83029A00845F28 /* info@2x.PNG in Resources */,
+				C2B8DA441F07A22F00988F0C /* assessmentnew.png in Resources */,
 				E61ED1831E8D87EE001BC8CF /* testimonail_add@2x.png in Resources */,
 				E6E9FEA91EA7C8CF005328ED /* lock_icon@1x.png in Resources */,
 				E684ADE01E83029A00845F28 /* info@3x.PNG in Resources */,
 				C21A57F11EE5B7BE000F15C9 /* LiveClassSubviews.xib in Resources */,
 				E6A6ABAC1EA92E4300CD5848 /* default_banner.jpg in Resources */,
 				E684ADDA1E83029A00845F28 /* ic_thumb_up_blue@3x.PNG in Resources */,
+				C2B8DA4A1F07A25000988F0C /* ans_correct.png in Resources */,
 				C70D52501E65328500D05060 /* Dashboard@3x.PNG in Resources */,
 				E684ADA51E83029A00845F28 /* eye_active@1x.png in Resources */,
 				C719419B1E950E0800464621 /* 3@3x.png in Resources */,
 				E684ADBD1E83029A00845F28 /* ic_arrow_downward_grey@1x.PNG in Resources */,
 				E684AD5B1E82D23F00845F28 /* disscusstion@2x.PNG in Resources */,
 				E684ADB11E83029A00845F28 /* file_icon@1x.PNG in Resources */,
+				C2B8DA461F07A23800988F0C /* ans_wrong.png in Resources */,
 				C70D524D1E65328500D05060 /* Course@3x.PNG in Resources */,
 				E640667D1EC709E700541DA9 /* eye_continue@3x.PNG in Resources */,
 				E684ADE11E83029A00845F28 /* like_icon@1x.PNG in Resources */,
+				C2B8DA261F07A19500988F0C /* note_icon.png in Resources */,
 				E6E9FEAF1EA7C8CF005328ED /* tick@2x.png in Resources */,
 				E684ADDB1E83029A00845F28 /* ic_warning_red@1x.png in Resources */,
 				E684ADC71E83029A00845F28 /* ic_keyboard_arrow_left_grey@2x.PNG in Resources */,
-				C2F1EB281EF81F9E00CAAF85 /* disscusstion.png in Resources */,
 				E640667B1EC709D400541DA9 /* eye_continue@2x.PNG in Resources */,
 				E684AD5F1E82D23F00845F28 /* download_icon@3x.png in Resources */,
 				C70D525B1E65328500D05060 /* Message@2x.PNG in Resources */,
@@ -2172,6 +2354,7 @@
 				C2DE682E1EE1CF4B00DF0236 /* Faculty.swift in Sources */,
 				C7EF772A1E67E9D400A4B079 /* SDWebImageDownloaderOperation.m in Sources */,
 				C20744591EED755E004BC415 /* NotesDetailsModel.swift in Sources */,
+				C2FA4C681EFDB7DB004C254E /* LearnerBasicassessmentModel.swift in Sources */,
 				C7EF773F1E68068C00A4B079 /* TEAttendenceList.swift in Sources */,
 				C7226AE11E654AA9001A0680 /* TECounsellerData.swift in Sources */,
 				C7177CF21E55AEFA0048BEF8 /* LeftMenuViewController.swift in Sources */,
@@ -2191,6 +2374,7 @@
 				C7177D101E55B0AA0048BEF8 /* JsonObjectParser.swift in Sources */,
 				C7F2382E1E6E88F10017A9A8 /* TEAssessmentTest.swift in Sources */,
 				C2DE68361EE1D24E00DF0236 /* NotesAndVideo.swift in Sources */,
+				C26C6CB51F002F24001AA6A5 /* ProfileUserEducationModel.swift in Sources */,
 				C20056471EEC3C5500ACEE7C /* NotesTableCell.swift in Sources */,
 				C7F238471E6EBEA30017A9A8 /* TSAssementQuestionOption.swift in Sources */,
 				C7177D391E56F6DC0048BEF8 /* AssessmentViewController.swift in Sources */,
@@ -2203,6 +2387,7 @@
 				C7EF77321E67E9D400A4B079 /* UIImageView+WebCache.m in Sources */,
 				C2DE68281EE1CDB700DF0236 /* Batch.swift in Sources */,
 				C7F2383D1E6EBB530017A9A8 /* TEAssessmentReviewContent.swift in Sources */,
+				C2FA4C661EFDB62D004C254E /* LearnerBasicInfoModel.swift in Sources */,
 				C7226ADF1E654A95001A0680 /* TEUserData.swift in Sources */,
 				C2B67AD11EF051DF00D46523 /* TAssessmentViewController.swift in Sources */,
 				C7177D3E1E5701550048BEF8 /* AssignmentViewController.swift in Sources */,
@@ -2210,6 +2395,7 @@
 				E6BAD30F1EB12D7D0050838A /* AgrumeCell.swift in Sources */,
 				C2B379E81EF1AE30001EF93A /* AssessmentModel.swift in Sources */,
 				C7177CFF1E55AF650048BEF8 /* DashboardViewController.swift in Sources */,
+				C2A199241EFF815B007743F3 /* CustomControllerForLiveClasses.swift in Sources */,
 				C2B379DE1EF189C8001EF93A /* AttendanceModel.swift in Sources */,
 				C207445B1EED7636004BC415 /* Student_view_info.swift in Sources */,
 				C7177D2C1E55C4830048BEF8 /* TourViewController.swift in Sources */,
@@ -2235,6 +2421,7 @@
 				C20056491EEC3CA200ACEE7C /* AssignmentTableCell.swift in Sources */,
 				C7226AE61E658431001A0680 /* TEDiscussionData.swift in Sources */,
 				C7177CFB1E55AF140048BEF8 /* LeftDrawerItemsGroup.swift in Sources */,
+				C2A5E3311F0493DE0002448C /* SummaryMiddleView.swift in Sources */,
 				C7F238431E6EBD280017A9A8 /* TSAssessmentTestQuestion.swift in Sources */,
 				C708AB421E5B1C9700347769 /* BachmatesViewController.swift in Sources */,
 				C20744671EEDD516004BC415 /* AssignmentDetailModel.swift in Sources */,
@@ -2244,6 +2431,7 @@
 				C2B67ACF1EF051C000D46523 /* TAssignmentViewController.swift in Sources */,
 				C7F238321E6E96FC0017A9A8 /* TEAssessmentQuestion.swift in Sources */,
 				C7177D491E571FC10048BEF8 /* NotificationDetailViewController.swift in Sources */,
+				C2A056F61EFE2E7E00938367 /* LearnerBasicAssignmentModel.swift in Sources */,
 				C7177D1C1E55B2670048BEF8 /* Constant.swift in Sources */,
 				C7EF76F51E66E3FF00A4B079 /* TEAssignmentDetail.swift in Sources */,
 				C72042E51E89182E00AC2131 /* DKCamera.swift in Sources */,
@@ -2254,12 +2442,15 @@
 				E6BAD3111EB12D7D0050838A /* UIViewExtensions.swift in Sources */,
 				C28FE73D1EEEBA8300D26C14 /* CustomControllerForLiveClassDetails.swift in Sources */,
 				C2B379E21EF19FD2001EF93A /* TAttendanceModel.swift in Sources */,
+				C2FA4C621EFDAC30004C254E /* LeanerTableCell.swift in Sources */,
 				C7F238301E6E95A40017A9A8 /* TEAsssessmentTestQuestion.swift in Sources */,
 				C7177D121E55B0AA0048BEF8 /* NSAMutableDictionary.swift in Sources */,
 				C77C05691E6D6C6A004DAC80 /* ForgotPasswordViewController.swift in Sources */,
 				C2DE682A1EE1CECD00DF0236 /* Course.swift in Sources */,
 				C2ABE3C51EDF12FC006C7AB8 /* TMyCourseDetailViewController.swift in Sources */,
+				C2A5E3331F04AD2D0002448C /* SendMessageCell.swift in Sources */,
 				C20744611EEDC739004BC415 /* CustomContollerForDetailAssignment.swift in Sources */,
+				C2FA4C601EFDA4B9004C254E /* LearnerVireController.swift in Sources */,
 				C28FE73B1EEEB9D700D26C14 /* time_details.swift in Sources */,
 				C72042E31E89182E00AC2131 /* DKAssetGroupGridLayout.swift in Sources */,
 				C7EF76EE1E66C16B00A4B079 /* TEModuleData.swift in Sources */,
@@ -2278,6 +2469,7 @@
 				C7EF76F91E66E43200A4B079 /* TEAssignmentDetailContent.swift in Sources */,
 				C7177D421E570A830048BEF8 /* AttendenceViewController.swift in Sources */,
 				C7226AE31E654B60001A0680 /* TEResultData.swift in Sources */,
+				C26C6CB31F002EBA001AA6A5 /* ProfileUserExperienceModel.swift in Sources */,
 				C72042ED1E89182E00AC2131 /* DKPermissionView.swift in Sources */,
 				C7EF772C1E67E9D400A4B079 /* SDWebImagePrefetcher.m in Sources */,
 				C7177CF61E55AEFA0048BEF8 /* SSASideMenu.swift in Sources */,
@@ -2290,20 +2482,25 @@
 				C7EF772D1E67E9D400A4B079 /* UIButton+WebCache.m in Sources */,
 				C7F2382C1E6E88BE0017A9A8 /* TEAssessmentModule.swift in Sources */,
 				C7F2383A1E6EBAD50017A9A8 /* TEAssessmentReviewData.swift in Sources */,
+				C26C6CB11EFF8E79001AA6A5 /* CellForLiveClassesDetail.swift in Sources */,
 				C71AD7B11E81066300492E2A /* TENotes.swift in Sources */,
 				C7EF77271E67E9D400A4B079 /* SDWebImageCompat.m in Sources */,
 				C2DE682C1EE1CF1900DF0236 /* Institute.swift in Sources */,
 				C72042E21E89182E00AC2131 /* DKAssetGroupDetailVC.swift in Sources */,
+				C2A5E32F1F0493C40002448C /* SummaryUpperView.swift in Sources */,
+				C2A056FD1EFE673800938367 /* ProfileuserExperience.swift in Sources */,
 				C7177D071E55B09A0048BEF8 /* DataUtils.swift in Sources */,
 				C28FE7361EEEB85600D26C14 /* LiveClassDetailsModel.swift in Sources */,
 				C7177D0A1E55B09A0048BEF8 /* Reachability.swift in Sources */,
 				C2DE68341EE1D11C00DF0236 /* Live_Classes.swift in Sources */,
+				C2A056FB1EFE650200938367 /* ProfileBasicModel.swift in Sources */,
 				C7177D091E55B09A0048BEF8 /* ModelManager.swift in Sources */,
 				C77C05641E6D5B04004DAC80 /* SelectContactTableViewCell.swift in Sources */,
 				C7EF76F11E66C98A00A4B079 /* TEAssignmentData.swift in Sources */,
 				C77C05671E6D5BCC004DAC80 /* TEModuleDetailData.swift in Sources */,
 				C7177D401E5705BC0048BEF8 /* AssignmentDetailViewController.swift in Sources */,
 				C212C3941EE090B200B0B4DB /* TDetailDashBoardViewController.swift in Sources */,
+				C2FA4C641EFDB22F004C254E /* LearnerModel.swift in Sources */,
 				C7F238381E6EB6BC0017A9A8 /* AssessmentReviewViewController.swift in Sources */,
 				C7F238281E6E85770017A9A8 /* TEAssessmentData.swift in Sources */,
 				C7EF77311E67E9D400A4B079 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -2316,6 +2513,7 @@
 				C2DE68321EE1D0BA00DF0236 /* Queries.swift in Sources */,
 				C7EF76EB1E66B10600A4B079 /* ModulesViewController.swift in Sources */,
 				C7177D181E55B0F90048BEF8 /* FloatLabelTextField.swift in Sources */,
+				C2A057011EFE69FB00938367 /* UserProfileViewController.swift in Sources */,
 				C71AD7B71E812C9900492E2A /* TEModuleVideo.swift in Sources */,
 				E61560EA1E880111000BB310 /* SeendMessageViewController.swift in Sources */,
 				C71AD7B31E81076000492E2A /* TENoteContent.swift in Sources */,
@@ -2343,6 +2541,7 @@
 				C7226AE91E6599A8001A0680 /* TECourseData.swift in Sources */,
 				C7EF77241E67E9D400A4B079 /* MKAnnotationView+WebCache.m in Sources */,
 				C7EF76FB1E66E45900A4B079 /* TEAssignmentDetailAssignment.swift in Sources */,
+				C2A056F91EFE64A400938367 /* ProfileModel.swift in Sources */,
 				C7739A421E698D950038BDD1 /* TEStudentData.swift in Sources */,
 				C7739A401E697C470038BDD1 /* TEBatchmateData.swift in Sources */,
 				C7EF773D1E68027200A4B079 /* TEAttendenceData.swift in Sources */,
@@ -2355,6 +2554,8 @@
 				C7EF772F1E67E9D400A4B079 /* UIImage+MultiFormat.m in Sources */,
 				C74C47AA1E7FFB880099A986 /* AssessmentSubmitDetailViewController.swift in Sources */,
 				E6E9FEBF1EA89601005328ED /* ReferViewController.swift in Sources */,
+				C26C6CAF1EFF8E57001AA6A5 /* TimingCell.swift in Sources */,
+				C2A056FF1EFE67AA00938367 /* ProfileUserEducation.swift in Sources */,
 				C7EF76FD1E66E48100A4B079 /* TEAssignmentDetailModule.swift in Sources */,
 				C200564F1EEC4E0C00ACEE7C /* ExpandableModuleViewController.swift in Sources */,
 				C77C055F1E6D581A004DAC80 /* MultiSelectionObject.swift in Sources */,
@@ -2431,10 +2632,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ankur Saxena (BR3WDFF2WW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ankur Saxena (BR3WDFF2WW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = MW346528RT;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2454,6 +2656,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = None;
+				PROVISIONING_PROFILE_SPECIFIER = None;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2482,10 +2686,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ankur Saxena (BR3WDFF2WW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ankur Saxena (BR3WDFF2WW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = MW346528RT;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2498,6 +2703,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = None;
+				PROVISIONING_PROFILE_SPECIFIER = None;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2511,15 +2718,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEVELOPMENT_TEAM = YVKQ6MEP86;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ankur Saxena (BR3WDFF2WW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ankur Saxena (BR3WDFF2WW)";
+				DEVELOPMENT_TEAM = MW346528RT;
 				INFOPLIST_FILE = TalentEdge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talentedge.studentapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "06af9f0a-441a-4f34-a95c-288e3db3fcde";
+				PROVISIONING_PROFILE = "4a3efe88-ed1b-4b6c-96b2-89c4a9566bb2";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TalentEdge/TalentEdge-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2533,15 +2740,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEVELOPMENT_TEAM = YVKQ6MEP86;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ankur Saxena (BR3WDFF2WW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ankur Saxena (BR3WDFF2WW)";
+				DEVELOPMENT_TEAM = MW346528RT;
 				INFOPLIST_FILE = TalentEdge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talentedge.studentapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "06af9f0a-441a-4f34-a95c-288e3db3fcde";
+				PROVISIONING_PROFILE = "4a3efe88-ed1b-4b6c-96b2-89c4a9566bb2";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TalentEdge/TalentEdge-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -2554,6 +2761,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = MW346528RT;
 				INFOPLIST_FILE = TalentEdgeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.currencykart.frontend;
@@ -2569,6 +2777,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = MW346528RT;
 				INFOPLIST_FILE = TalentEdgeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.currencykart.frontend;

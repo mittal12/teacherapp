@@ -10,9 +10,46 @@ import UIKit
 
 class CustomControllerForDetailAssessment: UIViewController , UITableViewDataSource,UITableViewDelegate {
 
+    @IBOutlet weak var mainUpperView: UIView!
     var assessmentDetailObj : AssessmentDetailModel?
     
     var isCameFromDrawer : Bool!
+    
+    @IBOutlet weak var upperImageView: UIImageView!
+    
+    
+    @IBOutlet weak var mainScrollView: UIScrollView!
+    @IBOutlet weak var tiitleLabel: UILabel!
+    
+    
+    @IBOutlet weak var subTitleLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
+    
+    @IBOutlet weak var publicationLabel: UILabel!
+    @IBOutlet weak var upperInnerView: UIView!
+    
+    @IBOutlet weak var circleLabel: UILabel!
+    
+    @IBOutlet weak var completedLabel: UILabel!
+    
+    
+    @IBOutlet weak var studentAttemptedValueLabel: UILabel!
+    
+    @IBOutlet weak var studentAttemptedImageView: UIImageView!
+    
+    
+    @IBOutlet weak var stduentAttemptedLabel: UILabel!
+    
+    @IBOutlet weak var studentNotAttemptedValueLabel: UILabel!
+    
+    
+    @IBOutlet weak var studentNotAttemptedImageView: UIImageView!
+    
+    @IBOutlet weak var studentNotAttemptedLabel: UILabel!
+    
+    @IBOutlet weak var modeLabel: UILabel!
     
     var content_type_id: NSNumber?
     var content_id :NSNumber?
@@ -26,11 +63,17 @@ class CustomControllerForDetailAssessment: UIViewController , UITableViewDataSou
     @IBOutlet weak var upperViewHeight: NSLayoutConstraint!
 
     
+    @IBOutlet weak var tableView: UITableView!
     
     var assignmentObj: TEModuleDetailData!
     override func viewDidLoad() {
         super.viewDidLoad()
-self.subNavTitleLabel.text = assignmentObj.module_name
+        self.subNavTitleLabel.text = assignmentObj.module_name
+        self.mainScrollView.isHidden = true
+        self.tableView.separatorStyle = .none
+        assessmentDetailObj = AssessmentDetailModel()
+      //  self.mainScrollView.addScalableCover(with: ModelManager.singleton.courseImage)
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -49,10 +92,11 @@ self.subNavTitleLabel.text = assignmentObj.module_name
         ServerCommunication.singleton.requestWithPost(API_NOTES_DETAILS ,headerDict: headers, postString: str, success: { (successResponseDict) -> Void in
             print(successResponseDict)
             self.assessmentDetailObj = (JSONOBJECTPARSER.parseJsonData(DataUtils.convertStringForAltaObjectParser("AssessmentDetailModel"), jsonData: successResponseDict.value(forKey: "resultData") as! NSDictionary) as! AssessmentDetailModel?)!
-//            self.setUpUIUpperView()
-//            self.tableView.reloadData()
-//            self.tableView.constant = self.tableView.contentSize.height
-//            self.tableView.is = false
+            self.mainScrollView.isHidden =  false
+            self.setUpUIUpperView()
+            self.tableView.reloadData()
+            self.tableViewHeight.constant = self.tableView.contentSize.height
+            self.tableView.isScrollEnabled = false
             
         }) { (errorResponseDict) -> Void in
             DataUtils.showAlertMessage(errorResponseDict.value(forKey: "errDesc") as! String, withTitle: "", delegate: self)
@@ -61,49 +105,62 @@ self.subNavTitleLabel.text = assignmentObj.module_name
     }
     func setUpUIUpperView()
     {
-//        cell.tittleLabel.text = subModuleArray[indexPath.row].title
-//        cell.descriptionLabel.text = subModuleArray[indexPath.row].desc
-//        
-//        
-//        cell.subtitleLabel.text = subModuleArray[indexPath.row].module_name
-//        //cell.bottomBlueButton.setTitle("  Attempted  ", for: UIControlState())
-//        cell.upperImageView.image = UIImage(named: "assessment1.png")
-//        
-//        let partOne = NSMutableAttributedString(string: subModuleArray[indexPath.row].start_date_value, attributes: yourAttributes)
-//        let partTwo = NSMutableAttributedString(string: subModuleArray[indexPath.row].end_date_value, attributes: yourAttributes)
-//        let combination = NSMutableAttributedString()
-//        combination.append(NSAttributedString(string: "Published On : "))
-//        combination.append(partOne)
-//        combination.append(NSAttributedString(string: " | End Date : "))
-//        combination.append(partTwo)
-//        cell.publicationLabel.attributedText = combination
-//        
-//        let partThree = NSMutableAttributedString(string: String(format : "%d",subModuleArray[indexPath.row].total_questions.intValue), attributes: yourAttributes)
-//        let partFour = NSMutableAttributedString(string: subModuleArray[indexPath.row].total_duration, attributes: yourAttributes)
-//        let partFive = NSMutableAttributedString(string: String(format : "%d",subModuleArray[indexPath.row].total_marks.intValue), attributes: yourAttributes)
-//        
-//        let combination1 = NSMutableAttributedString()
-//        combination1.append(NSAttributedString(string: "Question : "))
-//        combination1.append(partThree)
-//        combination1.append(NSAttributedString(string: " | Duration : "))
-//        combination1.append(partFour)
-//        combination1.append(NSAttributedString(string: " | Max Marks : "))
-//        combination1.append(partFive)
-//        
-//        cell.publicationLabel.attributedText = combination1
-//        
-//        cell.circleLabel.text = String(describing:subModuleArray[indexPath.row].avg_completion_percentage)
-//        cell.circleLabel.text = cell.circleLabel.text! + "%"
-//        
-//        cell.scoreLabel.text = "Average Score"
-//        cell.studentAttemptedValueLabel.text = String(describing: subModuleArray[indexPath.row].cnt_attempted)
-//        cell.studentNotAttemptedValueLabel.text = String(describing: subModuleArray[indexPath.row].cnt_not_attempted)
-//        cell.studentAttemptedLabel.text = "Students Attempted"
-//        cell.studentNotAttemptedLabel.text  = "Student unAttempted"
-//        // cell.studentAttemptedImageView.image =  UIImage(named:"")
-//        
-//        //cell.studentnotAttemptedImageView.image = UIImage(named:"")
-//        drawFullCircle(end: CGPoint(x: cell.circleLabel.frame.origin.x, y: 20.0), ofColor: DataUtils.colorWithHexString("3bab14"), inView: cell.circleLabel, completionPercentage: Double(subModuleArray[indexPath.row].avg_completion_percentage))
+         let yourAttributes = [NSForegroundColorAttributeName: kGrayColor]
+        self.tiitleLabel.text = assignmentObj.title
+        self.descriptionLabel.text = assignmentObj.desc
+        
+        self.subTitleLabel.text = assignmentObj.module_name
+        //self.bottomBlueButton.setTitle("  Attempted  ", for: UIControlState())
+        self.upperImageView.image = UIImage(named: "assessment1.png")
+        
+        let partOne = NSMutableAttributedString(string: assignmentObj.start_date_value, attributes: yourAttributes)
+        let partTwo = NSMutableAttributedString(string: assignmentObj.end_date_value, attributes: yourAttributes)
+        let combination = NSMutableAttributedString()
+        combination.append(NSAttributedString(string: "Published On : "))
+        combination.append(partOne)
+        combination.append(NSAttributedString(string: " | End Date : "))
+        combination.append(partTwo)
+        self.publicationLabel.attributedText = combination
+
+        let partThree = NSMutableAttributedString(string: String(format : "%d",assignmentObj.total_questions.intValue), attributes: yourAttributes)
+        let partFour = NSMutableAttributedString(string: assignmentObj.total_duration, attributes: yourAttributes)
+        let partFive = NSMutableAttributedString(string: String(format : "%d",assignmentObj.total_marks.intValue), attributes: yourAttributes)
+        
+        let combination1 = NSMutableAttributedString()
+        combination1.append(NSAttributedString(string: "Question : "))
+        combination1.append(partThree)
+        combination1.append(NSAttributedString(string: " | Duration : "))
+        combination1.append(partFour)
+        combination1.append(NSAttributedString(string: " | Max Marks : "))
+        combination1.append(partFive)
+        
+        self.questionLabel.attributedText = combination1
+        
+        self.circleLabel.text = String(describing:assignmentObj.avg_completion_percentage)
+        self.circleLabel.text = self.circleLabel.text! + "%"
+        
+        self.completedLabel.text = "Average Score"
+        self.studentAttemptedValueLabel.text = String(describing: assignmentObj.cnt_attempted)
+        self.studentNotAttemptedValueLabel.text = String(describing: assignmentObj.cnt_not_attempted)
+        //self.stduentAttemptedLabel.text = "Students Attempted"
+      //  self.studentNotAttemptedLabel.text  = "Student unAttempted"
+        // self.studentAttemptedImageView.image =  UIImage(named:"")
+        
+        //self.studentnotAttemptedImageView.image = UIImage(named:"")
+        
+        drawFullCircle(end: CGPoint(x: self.circleLabel.frame.origin.x, y: 20.0), ofColor: DataUtils.colorWithHexString("3bab14"), inView: self.circleLabel, completionPercentage: Double(assignmentObj.avg_completion_percentage))
+        
+        //ask it
+        let partofMode = NSMutableAttributedString(string: assignmentObj.test_type_label, attributes: yourAttributes)
+        
+        
+        
+        let combination2 = NSMutableAttributedString()
+        combination2.append(NSAttributedString(string: "Mode: "))
+        combination2.append(partofMode)
+        self.modeLabel.attributedText = combination2
+        self.mainUpperView.layer.cornerRadius = 3
+
     }
     
     func drawFullCircle(end:CGPoint, ofColor lineColor: UIColor, inView view:UIView, completionPercentage : Double)
@@ -114,12 +171,14 @@ self.subNavTitleLabel.text = assignmentObj.module_name
         //shapeLayer.lineDashPattern = [5 ,5]
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = UIColor.white.cgColor
-        shapeLayer.lineWidth = 1.0
+        shapeLayer.lineWidth = 5.0
         let shapeLayer1 = CAShapeLayer()
         shapeLayer1.path = circlePath.cgPath
         shapeLayer1.fillColor = UIColor.clear.cgColor
         shapeLayer1.strokeColor = UIColor.lightGray.cgColor
-        shapeLayer1.lineWidth = 1.0
+        shapeLayer1.strokeColor = UIColor.init(hexString: "D2D4D6").cgColor
+
+        shapeLayer1.lineWidth = 5.0
         // shapeLayer1.addSublayer(shapeLayer)
         
         let angle = completionPercentage * 3.6
@@ -129,12 +188,14 @@ self.subNavTitleLabel.text = assignmentObj.module_name
         // shapeLayer2.lineDashPattern = [5 ,5]
         shapeLayer2.fillColor = UIColor.clear.cgColor
         shapeLayer2.strokeColor = UIColor.white.cgColor
-        shapeLayer2.lineWidth = 1.0
+        shapeLayer2.lineWidth = 5.0
         let shapeLayer3 = CAShapeLayer()
         shapeLayer3.path = circlePath1.cgPath
         shapeLayer3.fillColor = UIColor.clear.cgColor
         shapeLayer3.strokeColor = UIColor.green.cgColor
-        shapeLayer3.lineWidth = 1.0
+        shapeLayer3.strokeColor = UIColor.init(hexString: "2F9DD4").cgColor
+
+        shapeLayer3.lineWidth = 5.0
         // shapeLayer3.addSublayer(shapeLayer2)
         view.layer.addSublayer(shapeLayer1)
         view.layer.addSublayer(shapeLayer3)
@@ -151,6 +212,8 @@ self.subNavTitleLabel.text = assignmentObj.module_name
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
         shapeLayer.strokeColor = lineColor.cgColor
+        shapeLayer.strokeColor = UIColor.init(hexString: "2F9DD4").cgColor
+
         shapeLayer.lineWidth = 10.0
         
         let path1 = UIBezierPath()
@@ -160,6 +223,8 @@ self.subNavTitleLabel.text = assignmentObj.module_name
         let shapeLayer1 = CAShapeLayer()
         shapeLayer1.path = path1.cgPath
         shapeLayer1.strokeColor = UIColor.lightGray.cgColor
+        shapeLayer1.strokeColor = UIColor.init(hexString: "D2D4D6").cgColor
+
         shapeLayer1.lineWidth = 10.0
         //        shapeLayer1.addSublayer(shapeLayer)
         view.layer.addSublayer(shapeLayer1)
@@ -172,16 +237,61 @@ self.subNavTitleLabel.text = assignmentObj.module_name
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        // return (assessmentDetailObj?.student_attempt_info.count)!
-        return 0
+        return  (assessmentDetailObj?.student_attempt_info.count)!
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableCellForAssessmentDetails", for: indexPath) as! CustomTableCellForAssessmentDetails
         
+        cell.scoreLabel.text = "Score: " + String(describing: (assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).marks)
+        cell.nameLabel.text = (assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).name
+      // ask it // cell.circleLabel.text = (assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).name
+        cell.completedLabel.text = "Completed"
+        
+    //   ask it //cell.howmanyAnsweredLabel.text = "\((assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).attempted_questions.intValue)/" + "\((assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).total_questions.intValue)"
+        
+        
+        //complete it // cell.assignmentNameLabel.text =
+        //complete it //    cell.upperImageView.image = UIImage(named:"")
+        
+        
+        cell.upperImageView.sd_setImage(with: URL(string: (assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).pic))
+        cell.timeTakenLabel.text = "Time Taken: " + "\((assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).time_taken.intValue)" + " seconds"
+        
+        
+       // let one = ((assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).attempted_questions == nil )? 0 : (assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).attempted_questions)
+        let one = (assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).attempted_questions
+        let two = (assessmentDetailObj?.student_attempt_info[indexPath.row] as! student_attempt_info).total_questions
+        
+        var three :Int = 0
+        
+        if(two.intValue != 0){
+        three = one.intValue / two.intValue
+        }
+        else
+        {
+        three = 0
+        }
+        cell.circleLabel.text = String(three)
+        cell.circleLabel.text =  cell.circleLabel.text! + "%"
+        
+        
+       cell.howmanyAnsweredLabel.text = "\(String(describing: one))/ \(String(describing: two)) ANSWERED"
+        
+        
+        drawFullCircle(end: CGPoint(x: cell.circleLabel.frame.origin.x, y: 20.0), ofColor: DataUtils.colorWithHexString("3bab14"), inView: cell.circleLabel, completionPercentage: Double(three))
+        
+
         
         
         
+        cell.upperImageView.layer.cornerRadius = cell.upperImageView.frame.size.height/2
+        cell.upperImageView.clipsToBounds = true
+        cell.upperViewFortableCell.layer.cornerRadius = 3
+
+        cell.selectionStyle = .none
         
         
        return cell
@@ -199,6 +309,42 @@ self.subNavTitleLabel.text = assignmentObj.module_name
     @IBAction func backButtonAction(_ sender : AnyObject){
         _ =   self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    
+    
+    @IBAction func readButtonTapped1(_ sender: Any) {
+        if(isExpanded == true)
+        {
+            
+            self.upperViewHeight.constant = upperViewHeight.constant - self.innerViewHeight.constant
+            self.innerViewHeight.constant = 0
+            isExpanded = false
+            self.readButton.setTitle("READ MORE", for: .normal)
+        }
+        else
+        {
+            //self.innerViewHeight.constant =
+            // self.upperViewHeight.constant = upperViewHeight.constant + self.innerViewHeight.constant
+            // isExpanded = true
+            //self.readButton.setTitle("READ LESS", for: .normal)
+            
+            let addedWidth:CGFloat = DataUtils.getDynamicHeight(self.descriptionLabel.text!, width: tableView.frame.size.width - 40)
+            self.innerViewHeight.constant = 75 + addedWidth
+            
+            //  self.innerViewHeight.constant = 226
+            self.upperViewHeight.constant = upperViewHeight.constant + self.innerViewHeight.constant
+            isExpanded = true
+            self.readButton.setTitle("READ LESS", for: .normal)
+            
+            
+            
+        }
+        
+
+    }
+    
+    
     @IBAction func readButtonTapped(_ sender: Any) {
         
         if(isExpanded == true)
@@ -215,6 +361,14 @@ self.subNavTitleLabel.text = assignmentObj.module_name
            // self.upperViewHeight.constant = upperViewHeight.constant + self.innerViewHeight.constant
            // isExpanded = true
             //self.readButton.setTitle("READ LESS", for: .normal)
+            
+            let addedWidth:CGFloat = DataUtils.getDynamicHeight(self.descriptionLabel.text!, width: tableView.frame.size.width - 40)
+            self.innerViewHeight.constant = 75 + addedWidth
+            
+            //  self.innerViewHeight.constant = 226
+            self.upperViewHeight.constant = upperViewHeight.constant + self.innerViewHeight.constant
+            isExpanded = true
+            self.readButton.setTitle("READ LESS", for: .normal)
             
         }
 

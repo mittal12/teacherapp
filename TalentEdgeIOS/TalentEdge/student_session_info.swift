@@ -9,14 +9,15 @@
 import Foundation
 class student_session_info:NSObject
 {
-    var id = String()
+    var id = NSNumber()
     var fname = String()
     var lname = String()
     var email = String()
     var mobile_no = String()
     var pic = String()
     var session_type = String()
-    var total_visits = String()
-    var total_duration = String()
+    var total_visits = NSNumber()
+    var total_duration = NSNumber()
     var time_details = NSAMutableArray().withClassName(DataUtils.convertStringForAltaObjectParser("time_details"))
+    var is_default_open = NSNumber()
 }
